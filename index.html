@@ -1,0 +1,48 @@
+<!doctype html><html lang="en"><head>
+<meta charset="utf-8"/><meta name="viewport" content="width=device-width,initial-scale=1"/>
+<title>Rise & Thrive Academy — Courses</title>
+<meta name="description" content="Explore our courses: Foundation, Mastermind, and Advanced Mastery."/>
+<script src="https://cdn.tailwindcss.com"></script>
+<style>
+  .btn{display:inline-flex;align-items:center;justify-content:center;border-radius:.75rem;padding:.75rem 1.25rem;font-weight:600;border:1px solid #e5e7eb}
+  .btn-primary{background:#DB910F;color:#fff;border:none}
+  .card{background:#fff;border:1px solid #e5e7eb;border-radius:1rem;padding:1.5rem;box-shadow:0 1px 2px rgba(0,0,0,.04)}
+</style>
+</head><body class="bg-white text-neutral-800">
+<header class="border-b"><div class="max-w-6xl mx-auto px-6 py-4 font-semibold">Rise & Thrive Academy</div></header>
+<main class="max-w-6xl mx-auto px-6 py-10">
+  <h1 class="text-4xl font-extrabold">Choose Your Next Step</h1>
+  <p class="mt-2 text-neutral-600">Start with Foundation or jump into Mastermind / Advanced Mastery.</p>
+  <div class="grid md:grid-cols-3 gap-6 mt-8">
+    <article class="card">
+      <div class="text-sm font-semibold text-cyan-700">Foundation</div>
+      <h2 class="text-2xl font-bold mt-1">Transforming Pain into Power</h2>
+      <p class="mt-2 text-neutral-600">5-day core program. Instant Day-1 access.</p>
+      <div class="mt-4 flex gap-3">
+        <a class="btn btn-primary" href="/foundation/">View details</a>
+        <a class="btn" href="https://foundation.example.com" target="_blank">Go to landing</a>
+      </div>
+    </article>
+    <article class="card">
+      <div class="text-sm font-semibold text-cyan-700">Mastermind</div>
+      <h2 class="text-2xl font-bold mt-1">Growth & Accountability</h2>
+      <p class="mt-2 text-neutral-600">Cohort coaching with live calls.</p>
+      <div class="mt-4 flex gap-3">
+        <a class="btn btn-primary" href="/mastermind/">View details</a>
+        <a class="btn" href="https://mastermind.example.com" target="_blank">Go to landing</a>
+      </div>
+    </article>
+    <article class="card">
+      <div class="text-sm font-semibold text-cyan-700">Advanced Mastery</div>
+      <h2 class="text-2xl font-bold mt-1">Lead & Multiply</h2>
+      <p class="mt-2 text-neutral-600">Advanced tools & leadership labs.</p>
+      <div class="mt-4 flex gap-3">
+        <a class="btn btn-primary" href="/advanced-mastery/">View details</a>
+        <a class="btn" href="https://advanced.example.com" target="_blank">Go to landing</a>
+      </div>
+    </article>
+  </div>
+</main>
+<footer class="border-t"><div class="max-w-6xl mx-auto px-6 py-8 text-sm text-neutral-500">© <span id="y"></span> Rise & Thrive Academy</div></footer>
+<script>document.getElementById('y').textContent=new Date().getFullYear()</script>
+</body></html>
