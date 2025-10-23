@@ -18,4 +18,30 @@ This repository documents the live funnels and integrations for **Rise to Thrive
 ---
 
 ## 🧩 Funnel Flow Overview
+---
+
+## 🚀 Deploy Guide (Foundation Landing)
+
+**Repo:** `foundation-landing` (private)  
+**Host:** Netlify (static Next.js export to `out/`)  
+**Domain:** https://foundation.risetothrive-academy.com
+
+### Update content
+1. Edit copy in `src/` (pages/components) and assets in `public/`.
+2. Keep CTA links pointing to:
+   - Checkout: https://courses.risetothrive-academy.com/foundation/checkout
+   - Success:  https://foundation.risetothrive-academy.com/success
+3. Commit to `main`.
+
+### Build & publish (automatic)
+- Netlify builds on every commit.  
+- Build: `npm run build && npm run export`  
+- Publish dir: `out/`  
+- Config: `netlify.toml`
+
+**If deploy looks stale:** Netlify → **Deploys** → **Trigger deploy ▾** → **Clear cache and deploy site**
+
+### DNS / SSL reference
+GoDaddy DNS → CNAME `foundation` → `risetothrive-foundation.netlify.app`  
+SSL: Let’s Encrypt (auto-renew)
 
