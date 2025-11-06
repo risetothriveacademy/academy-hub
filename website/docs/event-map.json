@@ -1,0 +1,161 @@
+{
+  "version": "1.0.0",
+  "lastUpdated": "2025-11-06",
+  "events": {
+    "PageView": {
+      "platforms": ["meta", "google"],
+      "trigger": "page_load",
+      "parameters": {
+        "page_location": "window.location.href",
+        "page_title": "document.title",
+        "content_category": "dynamic"
+      }
+    },
+    "ViewContent": {
+      "platforms": ["meta"],
+      "trigger": "scroll_to_details",
+      "parameters": {
+        "content_name": "course_title",
+        "content_category": "Recovery Series",
+        "content_ids": ["course_slug"],
+        "content_type": "product",
+        "value": "product_price",
+        "currency": "USD"
+      }
+    },
+    "InitiateCheckout": {
+      "platforms": ["meta", "google"],
+      "trigger": "enroll_button_click",
+      "parameters": {
+        "content_name": "course_title",
+        "content_category": "Recovery Series",
+        "content_ids": ["course_slug"],
+        "value": "product_price",
+        "currency": "USD",
+        "num_items": 1
+      }
+    },
+    "Purchase": {
+      "platforms": ["meta", "google"],
+      "trigger": "success_page_load",
+      "parameters": {
+        "content_name": "course_title",
+        "content_category": "Recovery Series",
+        "content_ids": ["course_slug"],
+        "value": "product_price",
+        "currency": "USD",
+        "transaction_id": "stripe_payment_intent_id",
+        "num_items": 1
+      }
+    },
+    "AddToCart": {
+      "platforms": ["google"],
+      "trigger": "enroll_button_click",
+      "parameters": {
+        "items": [
+          {
+            "item_id": "course_slug",
+            "item_name": "course_title",
+            "item_category": "Recovery Series",
+            "price": "product_price",
+            "quantity": 1
+          }
+        ],
+        "value": "product_price",
+        "currency": "USD"
+      }
+    }
+  },
+  "courses": {
+    "recovery_introductory": {
+      "title": "Introduction to Recovery",
+      "slug": "recovery-introductory",
+      "price": 27,
+      "category": "Recovery Series"
+    },
+    "recovery_grief": {
+      "title": "Grief & Loss",
+      "slug": "recovery-grief",
+      "price": 27,
+      "category": "Recovery Series"
+    },
+    "recovery_fear": {
+      "title": "Fear",
+      "slug": "recovery-fear",
+      "price": 27,
+      "category": "Recovery Series"
+    },
+    "recovery_anxiety": {
+      "title": "Anxiety",
+      "slug": "recovery-anxiety",
+      "price": 27,
+      "category": "Recovery Series"
+    },
+    "recovery_depression": {
+      "title": "Depression",
+      "slug": "recovery-depression",
+      "price": 27,
+      "category": "Recovery Series"
+    },
+    "recovery_identity": {
+      "title": "Identity & Self-Worth",
+      "slug": "recovery-identity",
+      "price": 27,
+      "category": "Recovery Series"
+    },
+    "recovery_forgiveness": {
+      "title": "Forgiveness",
+      "slug": "recovery-forgiveness",
+      "price": 27,
+      "category": "Recovery Series"
+    },
+    "recovery_shame": {
+      "title": "Shame & Guilt",
+      "slug": "recovery-shame",
+      "price": 27,
+      "category": "Recovery Series"
+    },
+    "recovery_financial": {
+      "title": "Financial Recovery",
+      "slug": "recovery-financial",
+      "price": 27,
+      "category": "Recovery Series"
+    },
+    "recovery_boundaries": {
+      "title": "Healthy Boundaries",
+      "slug": "recovery-boundaries",
+      "price": 27,
+      "category": "Recovery Series"
+    },
+    "recovery_purpose": {
+      "title": "Purpose & Calling",
+      "slug": "recovery-purpose",
+      "price": 27,
+      "category": "Recovery Series"
+    },
+    "recovery_trauma": {
+      "title": "Trauma Healing",
+      "slug": "recovery-trauma",
+      "price": 27,
+      "category": "Recovery Series"
+    },
+    "recovery_resilience": {
+      "title": "Building Resilience",
+      "slug": "recovery-resilience",
+      "price": 27,
+      "category": "Recovery Series"
+    },
+    "recovery_faith": {
+      "title": "Faith in Hard Times",
+      "slug": "recovery-faith",
+      "price": 27,
+      "category": "Recovery Series"
+    },
+    "recovery_restoration": {
+      "title": "Restoration & Renewal",
+      "slug": "recovery-restoration",
+      "price": 27,
+      "category": "Recovery Series"
+    }
+  }
+}
