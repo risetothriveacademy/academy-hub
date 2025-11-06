@@ -2,12 +2,12 @@ import Link from "next/link";
 import { brand } from "@/lib/brand";
 
 // IMPORTANT: env var uses underscores, not hyphens
-// Example: recovery-introductory → NEXT_PUBLIC_STRIPE_URL_recovery_introductory
-const CHECKOUT_URL = process.env.NEXT_PUBLIC_STRIPE_URL_recovery_introductory || "#";
+// Example: recovery-boundaries → NEXT_PUBLIC_STRIPE_URL_recovery_boundaries
+const CHECKOUT_URL = process.env.NEXT_PUBLIC_STRIPE_URL_recovery_boundaries || "#";
 
 export const metadata = {
-  title: "Introduction to Recovery — Recovery Series",
-  description: "Focused 30-minute lesson + workbook. Faith-based recovery: Introduction to Recovery.",
+  title: "Healthy Boundaries — Recovery Series",
+  description: "Focused 30-minute lesson + workbook. Faith-based recovery: Healthy Boundaries.",
 };
 
 export default function Page() {
@@ -15,7 +15,7 @@ export default function Page() {
     <main className="min-h-screen bg-white text-[#3B3B3B]">
       <section className="bg-gradient-to-b from-[#7C3AED] via-[#8B5CF6] to-[#6D28D9]">
         <div className="mx-auto max-w-6xl px-6 py-14 text-white">
-          <h1 className="text-3xl md:text-4xl font-extrabold">Introduction to Recovery</h1>
+          <h1 className="text-3xl md:text-4xl font-extrabold">Healthy Boundaries</h1>
           <p className="mt-2 opacity-90 max-w-2xl">30-minute cinematic lesson with a practical workbook. Part of the Rise To Thrive Recovery Series.</p>
           <div className="mt-6">
             <Link href="#details" className="inline-flex rounded-2xl bg-white/10 px-5 py-2 font-semibold ring-1 ring-white/30 hover:bg-white/15">See Details</Link>
