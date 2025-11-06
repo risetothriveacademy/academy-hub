@@ -1,0 +1,7 @@
+platform,ad_type,course_slug,creative_name,final_url
+facebook,cpc,foundation,video1,https://risetothrive-hub.com/foundation?utm_source=facebook&utm_medium=cpc&utm_campaign=foundation-launch&utm_content=video1
+facebook,cpc,mastermind,video1,https://risetothrive-hub.com/mastermind?utm_source=facebook&utm_medium=cpc&utm_campaign=mastermind-launch&utm_content=video1
+youtube,cpc,foundation,shorts1,https://risetothrive-hub.com/foundation?utm_source=youtube&utm_medium=cpc&utm_campaign=foundation-launch&utm_content=shorts1
+youtube,cpc,mastermind,discovery1,https://risetothrive-hub.com/mastermind?utm_source=youtube&utm_medium=cpc&utm_campaign=mastermind-launch&utm_content=discovery1
+linkedin,cpc,advanced-mastery,static1,https://risetothrive-hub.com/advanced-mastery?utm_source=linkedin&utm_medium=cpc&utm_campaign=advanced-mastery-launch&utm_content=static1
+tiktok,cpc,recovery-introductory,story1,https://risetothrive-hub.com/courses/recovery-introductory?utm_source=tiktok&utm_medium=cpc&utm_campaign=recovery-introductory-launch&utm_content=story1
