@@ -7,7 +7,10 @@
     "build": "next build",
     "start": "next start",
     "lint": "bunx tsc --noEmit && next lint",
-    "format": "bunx biome format --write"
+    "format": "bunx biome format --write",
+    "export:links:csv": "node tools/export-payment-links.mjs --mode=csv > website/docs/recovery-stripe-links.csv",
+    "export:links:env": "node tools/export-payment-links.mjs --mode=env > website/docs/stripe-envs.txt",
+    "export:links": "bun run export:links:csv && bun run export:links:env"
   },
   "dependencies": {
     "class-variance-authority": "^0.7.1",
@@ -17,6 +20,7 @@
     "react": "^18.3.1",
     "react-dom": "^18.3.1",
     "same-runtime": "^0.0.1",
+    "stripe": "^15.0.0",
     "tailwind-merge": "^3.3.0",
     "tailwindcss-animate": "^1.0.7"
   },
