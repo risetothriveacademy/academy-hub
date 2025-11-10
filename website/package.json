@@ -8,6 +8,8 @@
     "start": "next start",
     "lint": "bunx tsc --noEmit && next lint",
     "format": "bunx biome format --write"
+    "export:links": "node ../../tools/export-links.mjs"
+
   },
   "dependencies": {
     "class-variance-authority": "^0.7.1",
