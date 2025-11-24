@@ -5,12 +5,13 @@ export default function FoundationStartPage() {
     <main className="min-h-screen flex items-center justify-center px-4">
       <div className="max-w-md w-full rounded-2xl border border-gray-200 bg-white p-6 shadow-sm bg-white/80 backdrop-blur">
         <h1 className="text-2xl font-semibold text-gray-900">
-          Foundation Course – Start Day 1
+          Foundation Course — Start Day 1
         </h1>
 
         <p className="mt-3 text-sm text-gray-700">
-          You’ve already purchased the 5-Day Foundation Course.  
-          Click the button below to go directly to your secure course portal.
+          You’ve already purchased the 5-Day Foundation Course.
+          <br />
+          Click the button below to access your secure course portal.
         </p>
 
         <a
