@@ -46,8 +46,8 @@ const PROGRAMS: Program[] = [
       "Personalized growth plans",
       "Faith-based transformation at depth",
     ],
-    ctaText: "Apply for Mastermind",
-    href: "/mastermind", // replace with your live application URL
+    ctaText: "Enter Mastermind Portal",
+    href: "https://same-0erqnwjk0zo-latest.netlify.app/mastermind/",
     accent: "gold",
   },
   {
@@ -60,8 +60,8 @@ const PROGRAMS: Program[] = [
       "Live intensives / retreat track",
       "Serve, lead, and multiply impact",
     ],
-    ctaText: "Explore Advanced Mastery",
-    href: "/advanced-mastery", // replace with your live URL
+    ctaText: "Coming Soon",
+    href: "#",
     accent: "teal",
   },
 ];
@@ -95,19 +95,29 @@ function ProgramCard({ p }: { p: Program }) {
         </ul>
 
         <div className="mt-5 flex items-center gap-3">
-          <a
-            href={`${p.href}${utm}`}
-            className={`inline-flex w-full items-center justify-center rounded-xl ${bg} px-4 py-2 text-sm font-semibold text-white transition ${hover}`}
-          >
-            {p.ctaText}
-          </a>
+          {p.href === "#" ? (
+            <button
+              disabled
+              className="inline-flex w-full items-center justify-center rounded-xl bg-gray-300 px-4 py-2 text-sm font-semibold text-gray-500 cursor-not-allowed opacity-60"
+              title="Coming soon"
+            >
+              {p.ctaText}
+            </button>
+          ) : (
+            <a
+              href={`${p.href}${utm}`}
+              className={`inline-flex w-full items-center justify-center rounded-xl ${bg} px-4 py-2 text-sm font-semibold text-white transition ${hover}`}
+            >
+              {p.ctaText}
+            </a>
+          )}
           {p.id === 1 && (
             <a
-              href={`/foundation/start${utm}`}
+              href="https://same-x3an0bjktsr-latest.netlify.app/foundation-course-"
               className="inline-flex w-full items-center justify-center rounded-xl border border-gray-300 px-4 py-2 text-sm font-semibold text-gray-700 hover:bg-gray-50"
-              title="Already purchased? Start Day 1"
+              title="Already purchased? Enter Foundation Portal"
             >
-              Already Purchased? Start Day 1
+              Enter Foundation Portal
             </a>
           )}
         </div>
