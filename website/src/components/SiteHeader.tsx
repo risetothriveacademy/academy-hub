@@ -8,7 +8,7 @@ import { useState } from "react";
 const links = [
   { href: "/intro-recovery/minicourses", label: "Intro Courses" },
   { href: "/courses/transformational-course", label: "Programs" },
-  { href: "https://same-7alif4078a8-latest.netlify.app/account/login", label: "Log In", external: true },
+  { href: "/account/login", label: "Log In" },
 ];
 
 export default function SiteHeader() {
@@ -37,17 +37,7 @@ export default function SiteHeader() {
                 : "text-[#3B3B3B]/80 hover:bg-black/5"
             }`;
 
-            return l.external ? (
-              <a
-                key={l.href}
-                href={l.href}
-                className={className}
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                {l.label}
-              </a>
-            ) : (
+            return (
               <Link
                 key={l.href}
                 href={l.href}
@@ -81,18 +71,7 @@ export default function SiteHeader() {
                   : "text-[#3B3B3B]/80 hover:bg-black/5"
               }`;
 
-              return l.external ? (
-                <a
-                  key={l.href}
-                  href={l.href}
-                  className={className}
-                  onClick={() => setOpen(false)}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
-                  {l.label}
-                </a>
-              ) : (
+              return (
                 <Link
                   key={l.href}
                   href={l.href}
