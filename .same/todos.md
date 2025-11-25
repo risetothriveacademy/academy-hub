@@ -1,5 +1,36 @@
 # Rise to Thrive Academy - Development Todos
 
+## 🚀 **IN PROGRESS - REQUEST 1: Root Domain → Academy Hub**
+
+### **Status:** ✅ Code Ready, ⏳ Awaiting Netlify Connection
+
+**What's Done:**
+- ✅ Netlify configuration files created
+- ✅ Build settings optimized (bun, Next.js 15)
+- ✅ Security headers added
+- ✅ Code committed and pushed to GitHub
+- ✅ Hub landing page ready with all 4 programs
+- ✅ Log In button in header
+
+**What You Need to Do:**
+📋 **Follow the guide:** `.same/netlify-deployment-guide.md`
+
+**Quick Steps:**
+1. Open https://app.netlify.com/projects/academy-hub-masterfile/overview
+2. Connect to GitHub repo: `risetothriveacademy/academy-hub`
+3. Branch: `master`
+4. Verify domain: `risetothrive-academy.com`
+5. Click "Deploy site"
+6. Wait 2-3 minutes for build
+7. Test: https://risetothrive-academy.com
+
+**Expected Result:**
+- Hub landing page loads
+- Shows: Introductory Recovery, Foundation, Mastermind, Advanced Mastery
+- Header has logo and "Log In" button
+
+---
+
 ## ⏳ **PENDING - Waiting on Same.new Support**
 
 ### **Latest Request: Hub Routing & Navigation Fixes** (Nov 24, 2025)
@@ -209,6 +240,27 @@ cd ahub/website && bun run build
 # Check status
 git status
 ```
+
+---
+
+## ✅ **COMPLETED TODAY (Nov 25, 2025)**
+
+### **Git & GitHub Backup**
+- [x] Initialized git repository
+- [x] Created comprehensive commit (119 files)
+- [x] Pushed to GitHub: `risetothriveacademy/academy-hub`
+- [x] All work safely backed up
+
+### **Netlify Configuration**
+- [x] Created root netlify.toml with proper base directory
+- [x] Updated build commands to use bun
+- [x] Configured Next.js plugin
+- [x] Added security headers
+- [x] Pushed to GitHub for deployment
+
+### **Documentation**
+- [x] Created netlify-deployment-guide.md
+- [x] Updated todos with current status
 
 ---
 
