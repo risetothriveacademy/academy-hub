@@ -113,11 +113,11 @@ function ProgramCard({ p }: { p: Program }) {
           )}
           {p.id === 1 && (
             <a
-              href="https://same-x3an0bjktsr-latest.netlify.app/foundation-course-"
+              href="/foundation/dashboard"
               className="inline-flex w-full items-center justify-center rounded-xl border border-gray-300 px-4 py-2 text-sm font-semibold text-gray-700 hover:bg-gray-50"
-              title="Already purchased? Enter Foundation Portal"
+              title="Already purchased? Access your Foundation Course"
             >
-              Enter Foundation Portal
+              Access Foundation Course
             </a>
           )}
         </div>

@@ -1,5 +1,54 @@
 # Rise to Thrive Academy - Development Todos
 
+## ✅ **COMPLETED - Foundation Course Integration (Nov 25, 2025)**
+
+### **Status:** ✅ Fully Integrated into Next.js
+
+**What's Been Built:**
+- ✅ Extracted all Foundation Day 1-5 content from Vite app
+- ✅ Created `data/foundation-course.ts` with video URLs, descriptions, questions
+- ✅ Built `/foundation/dashboard` page with all 5 days
+- ✅ Built `/foundation/day/[number]` dynamic pages for each day
+- ✅ Integrated HubSpot tracking (NO GoHighLevel!)
+- ✅ Authentication gating with NextAuth.js
+- ✅ Video player with content protection notice
+- ✅ Assignment questions display
+- ✅ Day navigation (Previous/Next)
+- ✅ Progress tracking UI
+- ✅ Updated Transformation Programs dashboard link
+- ✅ Responsive design with brand colors
+
+**Technical Implementation:**
+- Next.js 15 App Router with async params
+- Client/Server component separation
+- Suspense boundaries for loading states
+- HubSpot event tracking for course access & video plays
+- Session-based authentication
+- TypeScript interfaces for type safety
+
+**User Flow:**
+1. User purchases Foundation Course (external)
+2. User logs in → Dashboard
+3. Clicks "Access Foundation Course" → `/foundation/dashboard`
+4. Selects a day → `/foundation/day/1` (or 2, 3, 4, 5)
+5. Watches videos, completes assignments
+6. HubSpot tracks all activity
+
+**Files Created:**
+- `data/foundation-course.ts` - All course content
+- `src/lib/hubspot.ts` - HubSpot tracking service
+- `src/app/foundation/dashboard/page.tsx` - Foundation dashboard
+- `src/app/foundation/day/[number]/page.tsx` - Day pages (server)
+- `src/app/foundation/day/[number]/FoundationDayClient.tsx` - Day client component
+
+**Build Status:**
+- ✅ All TypeScript errors resolved
+- ✅ Build passes successfully
+- ✅ Dev server running smoothly
+- ✅ Ready to deploy
+
+---
+
 ## ✅ **COMPLETED - REQUEST 3: Transformation Programs Portal Buttons**
 
 ### **Status:** ✅ Built, Tested, & Pushed to GitHub
