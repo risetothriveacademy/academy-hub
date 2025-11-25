@@ -1,0 +1,56 @@
+integrated-master-risetothrive-academy-hub/
+├── .same/
+│   ├── execution-summary.md
+│   └── session-summary.md
+├── website/
+│   ├── data/
+│   │   ├── courses.json
+│   │   └── courses.backup.json
+│   ├── docs/
+│   │   ├── MINI-COURSES-LAUNCH-READINESS.md
+│   │   └── FOUNDATION-LAUNCH-READINESS.md
+│   ├── src/
+│   │   ├── app/
+│   │   │   ├── intro-recovery/
+│   │   │   │   └── minicourses/
+│   │   │   │       ├── page.tsx (listing)
+│   │   │   │       ├── page.backup.tsx
+│   │   │   │       └── [slug]/
+│   │   │   │           ├── page.tsx (dynamic)
+│   │   │   │           └── page.backup.tsx
+│   │   │   ├── courses/ (15 recovery courses)
+│   │   │   ├── minicourses/ (10 old mini-courses - legacy)
+│   │   │   └── thank-you/
+│   │   ├── components/
+│   │   │   └── SiteHeader.tsx
+│   │   └── lib/
+│   │       ├── brand.ts
+│   │       ├── brand.backup.ts
+│   │       └── utils.ts
+│   ├── public/
+│   ├── node_modules/
+│   ├── .next/
+│   ├── package.json
+│   ├── next.config.js
+│   ├── netlify.toml
+│   └── tsconfig.json
+├── foundation/
+│   └── index.html (static landing page)
+├── mastermind/
+│   └── index.html (static landing page)
+├── advanced-mastery/
+│   └── index.html (static landing page)
+└── tools/
+
+KEY LOCATIONS:
+✅ Mini-courses data: website/data/courses.json
+✅ Mini-courses listing: website/src/app/intro-recovery/minicourses/page.tsx
+✅ Mini-courses dynamic: website/src/app/intro-recovery/minicourses/[slug]/page.tsx
+✅ Brand system: website/src/lib/brand.ts
+✅ Documentation: website/docs/
+
+NOTES:
+- Main Next.js app is in /website folder
+- Transformational coaching static pages in root folders
+- Need to reorganize into proper sub-repo structure:
+  /introductory-recovery/ and /transformational-coaching/
