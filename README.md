@@ -1,47 +1,50 @@
-# Rise to Thrive Academy — Funnel & Domain Architecture
+# React + TypeScript + Vite
 
-This repository documents the live funnels and integrations for **Rise to Thrive Academy**.
+This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
 
----
+Currently, two official plugins are available:
 
-## ⚙️ Live Production Domains
+- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
+- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
 
-| Section | Domain | Platform | Purpose |
-|---|---|---|---|
-| **Foundation Landing** | https://foundation.risetothrive-academy.com | Netlify | Public landing + offer page |
-| **Checkout (Foundation)** | https://courses.risetothrive-academy.com/foundation/checkout | GoHighLevel + Stripe | Secure payment + enrollment |
-| **Success Page** | https://foundation.risetothrive-academy.com/success | Netlify | Post-purchase confirmation + redirect |
-| **Agency Hub (Dashboard)** | (set link here) | GoHighLevel | Destination after purchase |
-| **Support** | support@risetothrive-academy.com | Google Workspace | Customer service |
-| **Payments** | payments@risetothrive-academy.com | Stripe linked | Receipts & transactional emails |
+## Expanding the ESLint configuration
 
----
+If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
 
-## 🧩 Funnel Flow Overview
----
+- Configure the top-level `parserOptions` property like this:
 
-## 🚀 Deploy Guide (Foundation Landing)
+```js
+export default tseslint.config({
+  languageOptions: {
+    // other options...
+    parserOptions: {
+      project: ['./tsconfig.node.json', './tsconfig.app.json'],
+      tsconfigRootDir: import.meta.dirname,
+    },
+  },
+})
+```
 
-**Repo:** `foundation-landing` (private)  
-**Host:** Netlify (static Next.js export to `out/`)  
-**Domain:** https://foundation.risetothrive-academy.com
+- Replace `tseslint.configs.recommended` to `tseslint.configs.recommendedTypeChecked` or `tseslint.configs.strictTypeChecked`
+- Optionally add `...tseslint.configs.stylisticTypeChecked`
+- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and update the config:
 
-### Update content
-1. Edit copy in `src/` (pages/components) and assets in `public/`.
-2. Keep CTA links pointing to:
-   - Checkout: https://courses.risetothrive-academy.com/foundation/checkout
-   - Success:  https://foundation.risetothrive-academy.com/success
-3. Commit to `main`.
+```js
+// eslint.config.js
+import react from 'eslint-plugin-react'
 
-### Build & publish (automatic)
-- Netlify builds on every commit.  
-- Build: `npm run build && npm run export`  
-- Publish dir: `out/`  
-- Config: `netlify.toml`
-
-**If deploy looks stale:** Netlify → **Deploys** → **Trigger deploy ▾** → **Clear cache and deploy site**
-
-### DNS / SSL reference
-GoDaddy DNS → CNAME `foundation` → `risetothrive-foundation.netlify.app`  
-SSL: Let’s Encrypt (auto-renew)
-
+export default tseslint.config({
+  // Set the react version
+  settings: { react: { version: '18.3' } },
+  plugins: {
+    // Add the react plugin
+    react,
+  },
+  rules: {
+    // other rules...
+    // Enable its recommended rules
+    ...react.configs.recommended.rules,
+    ...react.configs['jsx-runtime'].rules,
+  },
+})
+```
