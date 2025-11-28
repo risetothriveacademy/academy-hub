@@ -19,7 +19,9 @@ import {
   Lightbulb,
   Target,
   Sparkles,
-  Download
+  Download,
+  Tv,
+  Play
 } from "lucide-react";
 import Link from "next/link";
 import { ImageWithFallback } from "@/components/ImageWithFallback";
@@ -323,6 +325,104 @@ export default function SpeakingPage() {
                 </CardContent>
               </Card>
             ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Legacy TV & Media Appearances */}
+      <section className="py-20 px-4 bg-white">
+        <div className="container mx-auto max-w-6xl">
+          <div className="text-center mb-16">
+            <div className="flex items-center justify-center gap-3 mb-4">
+              <Tv className="h-10 w-10 text-[#DB910F]" />
+              <h2 className="text-4xl font-bold text-gray-900">Legacy TV & Media Appearances</h2>
+            </div>
+            <p className="text-xl text-gray-600">
+              Watch Torah share powerful insights on faith, healing, and transformation
+            </p>
+          </div>
+
+          {/* Instruction Box */}
+          <div className="bg-gradient-to-r from-amber-100 to-blue-100 border-2 border-[#DB910F] rounded-xl p-6 mb-12">
+            <div className="flex items-start space-x-4">
+              <div className="bg-[#DB910F] rounded-full p-2 flex-shrink-0">
+                <Lightbulb className="h-6 w-6 text-white" />
+              </div>
+              <div>
+                <h3 className="text-xl font-bold text-gray-900 mb-2">🎬 How to Add Your Legacy TV Images</h3>
+                <p className="text-gray-700 mb-3">
+                  To replace these placeholder images with your actual Legacy TV episode screenshots:
+                </p>
+                <ol className="list-decimal list-inside space-y-2 text-gray-700">
+                  <li>Save your episode screenshots as: <code className="bg-white px-2 py-1 rounded text-sm font-mono">/legacy-tv-episode-1.jpg</code>, <code className="bg-white px-2 py-1 rounded text-sm font-mono">/legacy-tv-episode-2.jpg</code>, <code className="bg-white px-2 py-1 rounded text-sm font-mono">/legacy-tv-episode-3.jpg</code></li>
+                  <li>Place these files in the <code className="bg-white px-2 py-1 rounded text-sm font-mono">/website/public/</code> folder</li>
+                  <li>The placeholders will automatically be replaced with your images</li>
+                  <li>Recommended image size: 1920x1080px (16:9 ratio) for best quality</li>
+                </ol>
+              </div>
+            </div>
+          </div>
+
+          {/* Episode Cards */}
+          <div className="grid md:grid-cols-3 gap-8">
+            {[
+              {
+                episode: 1,
+                title: "Legacy TV Episode 1",
+                fallback: "https://images.unsplash.com/photo-1598550476439-6847785fcea6?w=800&h=450&fit=crop&auto=format"
+              },
+              {
+                episode: 2,
+                title: "Legacy TV Episode 2",
+                fallback: "https://images.unsplash.com/photo-1557804506-669a67965ba0?w=800&h=450&fit=crop&auto=format"
+              },
+              {
+                episode: 3,
+                title: "Legacy TV Episode 3",
+                fallback: "https://images.unsplash.com/photo-1553877522-43269d4ea984?w=800&h=450&fit=crop&auto=format"
+              }
+            ].map((item) => (
+              <Card key={item.episode} className="border-0 shadow-lg hover:shadow-2xl transition-all overflow-hidden group">
+                <div className="relative">
+                  {/* Episode Image with Placeholder Badge */}
+                  <div className="relative aspect-video overflow-hidden">
+                    <ImageWithFallback
+                      src={`/legacy-tv-episode-${item.episode}.jpg`}
+                      fallbackSrc={item.fallback}
+                      alt={item.title}
+                      className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105"
+                    />
+                    {/* PLACEHOLDER Badge */}
+                    <div className="absolute top-4 right-4 bg-red-600 text-white px-3 py-1 rounded-full text-xs font-bold shadow-lg">
+                      PLACEHOLDER
+                    </div>
+                    {/* Play Button Overlay */}
+                    <div className="absolute inset-0 bg-black/40 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity">
+                      <div className="bg-white/90 rounded-full p-6">
+                        <Play className="h-10 w-10 text-[#DB910F]" fill="currentColor" />
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <CardContent className="p-6">
+                  <h3 className="text-xl font-bold text-gray-900 mb-3">{item.title}</h3>
+                  <p className="text-gray-600 mb-4 text-sm">
+                    Torah shares transformative insights on healing, faith, and overcoming life's challenges.
+                  </p>
+                  <Button className="w-full bg-[#DB910F] hover:bg-[#c5820e] text-white">
+                    <Play className="h-4 w-4 mr-2" />
+                    Watch Episode
+                  </Button>
+                </CardContent>
+              </Card>
+            ))}
+          </div>
+
+          {/* Additional Note */}
+          <div className="mt-12 text-center">
+            <p className="text-gray-600 italic">
+              More episodes coming soon. Subscribe to stay updated on Torah's latest media appearances.
+            </p>
           </div>
         </div>
       </section>
