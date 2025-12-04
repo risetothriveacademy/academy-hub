@@ -1,50 +1,110 @@
-# React + TypeScript + Vite
+# Rise to Thrive Academy — Hub & Course Portal
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+This repository contains the full Academy Hub application for the Rise to Thrive ecosystem — including the Foundation Course (Day 1–5), the 18 Mini-Course Root Cause Library, the course dashboard, CRM integrations (HubSpot), login/auth pages, module pages, and future Mastermind + Advanced Mastery training areas.
 
-Currently, two official plugins are available:
+---
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## 🔎 Quick Reference (Academy Hub Overview)
 
-## Expanding the ESLint configuration
+### 📄 Main Pages
+- **Academy Dashboard (Main Home):**  
+  `src/app/page.tsx`
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
+- **Authentication (Login / Register):**  
+  `src/app/auth/*`
 
-- Configure the top-level `parserOptions` property like this:
+- **18 Mini-Courses (Root Causes):**  
+  Dynamic routing:  
+  `src/app/courses/[slug]/page.tsx`
 
-```js
-export default tseslint.config({
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ['./tsconfig.node.json', './tsconfig.app.json'],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-})
+- **Foundation Course (Day Pages):**  
+  `src/app/foundation/day-1/page.tsx`  
+  `src/app/foundation/day-2/page.tsx`  
+  `src/app/foundation/day-3/page.tsx`  
+  `src/app/foundation/day-4/page.tsx`  
+  `src/app/foundation/day-5/page.tsx`
+
+- **Mastermind (Future):**  
+  `src/app/mastermind/*`
+
+- **Advanced Mastery (Future):**  
+  `src/app/advanced-mastery/*`
+
+---
+
+## 🧩 Core Components
+
+- **Global Header / Navigation:**  
+  `src/components/site-header.tsx`
+
+- **Course Cards & Grids:**  
+  `src/components/course/*`
+
+- **Module & Lesson Viewer:**  
+  `src/components/modules/*`
+
+- **Forms (HubSpot-based):**  
+  `src/components/forms/*`
+
+---
+
+## 💳 Stripe Integration
+
+Each course (Foundation + 18 Mini-Courses) uses **Stripe Payment Links**.  
+These are stored directly in the course pages.
+
+**Example:**  
+`const stripeLink = "https://buy.stripe.com/...";`
+
+All payment links live in:
+- Foundation: each `day-X/page.tsx`
+- Mini-Courses: `courses/[slug]/page.tsx`
+
+---
+
+## 🧠 HubSpot CRM Integration
+
+Used for:
+- Lead capture  
+- Contact tagging  
+- Segmentation (e.g., `rtth_program`, `foundation_enrolled`, `mini_course_enrolled`)  
+- Automations (emails, workflows)
+
+Forms used in this repo live in:
+`src/components/forms/*`
+
+---
+
+## 🖼️ Branding + Assets
+
+- **Images & Thumbnails:**  
+  `/public/courses/*`  
+  `/public/assets/*`
+
+- **Brand Colors:**  
+  - Gold: `#DB910F`  
+  - Teal / Blue-Green: `#0097B2`  
+  - Charcoal: `#6C604B`
+
+---
+
+## 📚 Documentation
+
+- **Project Structure & Architecture:**  
+  *(Add later if needed)*
+
+- **Open Items & TODOs:**  
+  *(You can create a `TODO.md` anytime)*
+
+---
+## 🚀 Development
+### Install dependencies
+
+```bash
+npm install
+npm run dev
+npm run build
 ```
+---
+Run these from the project root in your local development environment.
 
-- Replace `tseslint.configs.recommended` to `tseslint.configs.recommendedTypeChecked` or `tseslint.configs.strictTypeChecked`
-- Optionally add `...tseslint.configs.stylisticTypeChecked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and update the config:
-
-```js
-// eslint.config.js
-import react from 'eslint-plugin-react'
-
-export default tseslint.config({
-  // Set the react version
-  settings: { react: { version: '18.3' } },
-  plugins: {
-    // Add the react plugin
-    react,
-  },
-  rules: {
-    // other rules...
-    // Enable its recommended rules
-    ...react.configs.recommended.rules,
-    ...react.configs['jsx-runtime'].rules,
-  },
-})
-```
