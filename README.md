@@ -104,14 +104,11 @@ Forms used in this repo live in:
 npm install
 npm run dev
 npm run build
-```
---                                  
- ## Universal Legal Disclosures
+```                                
+Run these from the project root in your local development environment.
+## Universal Legal Disclosures
 - **Source of truth:** `/disclosures/universal-legal-disclosures.md`
 - **Public route:** `/disclosures/universal-legal-disclosures`
 - **Usage:** All landing pages, sites, PDFs, and emails must reference this file.
 - **Web footnote:** Add the short disclaimer + link in the global footer/layout.
 - **Do not** create duplicate legal text in random files. If updates are needed, edit the markdown file only and redeploy.
-
-Run these from the project root in your local development environment.
-
