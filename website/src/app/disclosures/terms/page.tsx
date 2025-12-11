@@ -6,14 +6,14 @@ const BRAND = {
   slate: "#0f172a",
 };
 
-export default function TermsOfUsePage() {
+export default function TermsOfServicePage() {
   return (
     <main className="min-h-screen bg-slate-950">
       <div className="mx-auto max-w-4xl px-6 py-16">
         {/* Header */}
         <div className="mb-12">
           <h1 className="text-4xl md:text-5xl font-extrabold text-white mb-4">
-            Terms of Use
+            Terms of Service
           </h1>
           <p className="text-lg text-slate-300">
             Effective Date: December 2025
@@ -31,11 +31,32 @@ export default function TermsOfUsePage() {
             }}
           >
             <p className="text-lg text-white leading-relaxed">
-              These Terms of Use are part of our integrated legal document titled{" "}
+              These Terms of Service are part of our integrated legal document titled{" "}
               <strong>"Universal Legal Disclosures"</strong>.
             </p>
             <p className="text-slate-300 mt-4">
-              For the complete Terms of Use, please review <strong>Section 2 — Terms of Use</strong> in the Universal Legal Disclosures.
+              For the full, detailed Terms (including intellectual property, user responsibilities, limitation of liability, and dispute resolution), please review:
+            </p>
+            <ul className="mt-4 space-y-2 text-slate-300">
+              <li className="flex items-start gap-2">
+                <span style={{ color: BRAND.teal }}>•</span>
+                <span><strong>Section 2</strong> — Terms of Use</span>
+              </li>
+              <li className="flex items-start gap-2">
+                <span style={{ color: BRAND.teal }}>•</span>
+                <span><strong>Section 3</strong> — Refund Policy</span>
+              </li>
+              <li className="flex items-start gap-2">
+                <span style={{ color: BRAND.teal }}>•</span>
+                <span><strong>Section 4</strong> — Faith-Based, Coaching & Format Disclaimer</span>
+              </li>
+              <li className="flex items-start gap-2">
+                <span style={{ color: BRAND.teal }}>•</span>
+                <span><strong>Section 5</strong> — Legal Protection Clauses</span>
+              </li>
+            </ul>
+            <p className="text-slate-300 mt-4">
+              in the Universal Legal Disclosures.
             </p>
           </div>
 
@@ -55,11 +76,81 @@ export default function TermsOfUsePage() {
             </Link>
           </div>
 
-          {/* Agreement Notice */}
+          {/* Summary - By Accessing or Purchasing */}
+          <div className="bg-slate-900/60 backdrop-blur-sm border border-slate-700 rounded-xl p-8">
+            <p className="text-lg text-white mb-6 leading-relaxed">
+              By accessing or purchasing any resource from <strong>Rise to Thrive Academy Inc.</strong>,
+              <strong> Rise to Thrive Hub LLC</strong>, <strong>Transforming Pain into Power</strong>, or{" "}
+              <strong>Torah Mathews (DBA Rise to Thrive Academy)</strong>, you agree that:
+            </p>
+
+            <div className="space-y-4 text-slate-300">
+              <div className="flex items-start gap-3">
+                <div
+                  className="mt-1 h-6 w-6 rounded-full flex items-center justify-center flex-shrink-0"
+                  style={{ backgroundColor: BRAND.teal }}
+                >
+                  <span className="text-white text-sm font-bold">•</span>
+                </div>
+                <p className="text-lg">
+                  All programs are faith-based and educational and do not replace professional medical, psychological, legal, or financial care
+                </p>
+              </div>
+
+              <div className="flex items-start gap-3">
+                <div
+                  className="mt-1 h-6 w-6 rounded-full flex items-center justify-center flex-shrink-0"
+                  style={{ backgroundColor: BRAND.teal }}
+                >
+                  <span className="text-white text-sm font-bold">•</span>
+                </div>
+                <p className="text-lg">
+                  All sales are final due to immediate digital access
+                </p>
+              </div>
+
+              <div className="flex items-start gap-3">
+                <div
+                  className="mt-1 h-6 w-6 rounded-full flex items-center justify-center flex-shrink-0"
+                  style={{ backgroundColor: BRAND.teal }}
+                >
+                  <span className="text-white text-sm font-bold">•</span>
+                </div>
+                <p className="text-lg">
+                  You receive a single-user, non-transferable license to use the content
+                </p>
+              </div>
+
+              <div className="flex items-start gap-3">
+                <div
+                  className="mt-1 h-6 w-6 rounded-full flex items-center justify-center flex-shrink-0"
+                  style={{ backgroundColor: BRAND.teal }}
+                >
+                  <span className="text-white text-sm font-bold">•</span>
+                </div>
+                <p className="text-lg">
+                  You will not copy, distribute, resell, or publicly share the course materials
+                </p>
+              </div>
+
+              <div className="flex items-start gap-3">
+                <div
+                  className="mt-1 h-6 w-6 rounded-full flex items-center justify-center flex-shrink-0"
+                  style={{ backgroundColor: BRAND.teal }}
+                >
+                  <span className="text-white text-sm font-bold">•</span>
+                </div>
+                <p className="text-lg">
+                  Any disputes will be handled according to the arbitration and governing-law clauses in the Universal Legal Disclosures
+                </p>
+              </div>
+            </div>
+          </div>
+
+          {/* Acceptance Notice */}
           <div className="bg-slate-900/40 border border-slate-700 rounded-xl p-6">
-            <p className="text-slate-300 text-center leading-relaxed">
-              By accessing or purchasing any <strong className="text-white">Rise to Thrive Academy</strong> resource,
-              you agree to these Terms of Use and to the full Universal Legal Disclosures.
+            <p className="text-slate-300 text-center leading-relaxed text-lg">
+              Use of this website and all related programs indicates your acceptance of these Terms and the full Universal Legal Disclosures.
             </p>
           </div>
 
