@@ -1,186 +1,209 @@
 "use client";
 
-import React, { useState } from "react";
-
 const BRAND = {
   teal: "#0097B2",
   gold: "#DB910F",
-  ink: "#3B3B3B",
 };
 
 export default function CreateAccountPage() {
-  const [isSubmitting, setIsSubmitting] = useState(false);
-  const [submitted, setSubmitted] = useState(false);
-
-  // TEMP: Just a front-end handler.
-  // Later this will:
-  // 1) Send the data to HubSpot (form or API),
-  // 2) Trigger the “Create your account” email,
-  // 3) Create a login for the course portal.
-  async function handleSubmit(e: React.FormEvent<HTMLFormElement>) {
-    e.preventDefault();
-    setIsSubmitting(true);
-
-    // Simulate async call
-    await new Promise((resolve) => setTimeout(resolve, 800));
-
-    setIsSubmitting(false);
-    setSubmitted(true);
-  }
-
   return (
-    <main className="min-h-screen flex items-center justify-center bg-slate-50 px-4 py-10">
-      <div className="w-full max-w-xl rounded-3xl bg-white shadow-xl border border-slate-200 overflow-hidden">
-        {/* Top banner */}
-        <div
-          className="px-6 py-4 text-center text-white font-semibold tracking-wide"
-          style={{
-            backgroundImage: `linear-gradient(135deg, ${BRAND.teal}, ${BRAND.gold})`,
-          }}
-        >
-          Create Your Rise to Thrive Account
+    <main className="min-h-screen bg-slate-950 text-slate-50 flex items-center justify-center px-4">
+      <div className="max-w-lg w-full rounded-3xl border border-slate-800 bg-slate-900/80 shadow-xl backdrop-blur-md p-8 sm:p-10">
+        {/* Pill */}
+        <div className="inline-flex items-center rounded-full border border-slate-700 bg-slate-900 px-3 py-1 text-xs font-semibold text-slate-300 mb-4">
+          <span
+            className="mr-2 inline-block h-2 w-2 rounded-full"
+            style={{ background: BRAND.teal }}
+          />
+          Rise to Thrive · Create Account
         </div>
 
-        <div className="px-6 py-6 space-y-4">
-          {/* Badge */}
-          <div className="flex justify-center">
-            <span className="inline-flex items-center gap-2 rounded-full bg-slate-100 px-4 py-1 text-xs font-semibold text-slate-600">
-              <span
-                className="inline-block h-2 w-2 rounded-full"
-                style={{ backgroundColor: BRAND.teal }}
+        {/* Heading */}
+        <h1 className="text-2xl sm:text-3xl font-semibold tracking-tight text-slate-50">
+          Create your{" "}
+          <span style={{ color: BRAND.teal }}>Rise to Thrive</span> account
+        </h1>
+
+        <p className="mt-3 text-sm text-slate-300 leading-relaxed">
+          Use the <span className="font-semibold">same email address</span> you
+          used when you purchased the course. This keeps your{" "}
+          <span className="font-semibold">progress and access</span> synced in
+          HubSpot.
+        </p>
+
+        {/* Create Account form */}
+        <form
+          className="mt-8 space-y-4"
+          onSubmit={(e) => {
+            e.preventDefault();
+            alert(
+              "Create account UI is working.\nNext step: connect this form to HubSpot authentication."
+            );
+          }}
+        >
+          <div className="grid gap-4 md:grid-cols-2">
+            <div className="space-y-1.5">
+              <label
+                htmlFor="firstName"
+                className="text-xs font-medium uppercase tracking-wide text-slate-300"
+              >
+                First Name
+              </label>
+              <input
+                id="firstName"
+                type="text"
+                required
+                placeholder="John"
+                className="w-full rounded-xl border border-slate-700 bg-slate-950/60 px-3 py-2.5 text-sm text-slate-50 placeholder:text-slate-500 focus:outline-none focus:ring-2 focus:ring-[var(--brand-teal)] focus:ring-offset-2 focus:ring-offset-slate-950"
+                style={
+                  {
+                    "--brand-teal": BRAND.teal,
+                  } as React.CSSProperties
+                }
               />
-              Step 1 · Secure your login details
-            </span>
+            </div>
+
+            <div className="space-y-1.5">
+              <label
+                htmlFor="lastName"
+                className="text-xs font-medium uppercase tracking-wide text-slate-300"
+              >
+                Last Name
+              </label>
+              <input
+                id="lastName"
+                type="text"
+                required
+                placeholder="Doe"
+                className="w-full rounded-xl border border-slate-700 bg-slate-950/60 px-3 py-2.5 text-sm text-slate-50 placeholder:text-slate-500 focus:outline-none focus:ring-2 focus:ring-[var(--brand-teal)] focus:ring-offset-2 focus:ring-offset-slate-950"
+                style={
+                  {
+                    "--brand-teal": BRAND.teal,
+                  } as React.CSSProperties
+                }
+              />
+            </div>
           </div>
 
-          <h1 className="text-center text-2xl font-semibold text-slate-900">
-            Welcome to the{" "}
-            <span style={{ color: BRAND.teal }}>5-Day Foundation Course</span>
-          </h1>
+          <div className="space-y-1.5">
+            <label
+              htmlFor="email"
+              className="text-xs font-medium uppercase tracking-wide text-slate-300"
+            >
+              Email address
+            </label>
+            <input
+              id="email"
+              type="email"
+              required
+              placeholder="you@example.com"
+              className="w-full rounded-xl border border-slate-700 bg-slate-950/60 px-3 py-2.5 text-sm text-slate-50 placeholder:text-slate-500 focus:outline-none focus:ring-2 focus:ring-[var(--brand-teal)] focus:ring-offset-2 focus:ring-offset-slate-950"
+              style={
+                {
+                  "--brand-teal": BRAND.teal,
+                } as React.CSSProperties
+              }
+            />
+          </div>
 
-          <p className="text-sm text-center text-slate-600">
-            Use the <strong>same email address</strong> you used for your
-            purchase. This keeps your Stripe payment, HubSpot profile, and
-            course progress all in sync.
+          <div className="space-y-1.5">
+            <label
+              htmlFor="password"
+              className="text-xs font-medium uppercase tracking-wide text-slate-300"
+            >
+              Password
+            </label>
+            <input
+              id="password"
+              type="password"
+              required
+              placeholder="Create a secure password"
+              className="w-full rounded-xl border border-slate-700 bg-slate-950/60 px-3 py-2.5 text-sm text-slate-50 placeholder:text-slate-500 focus:outline-none focus:ring-2 focus:ring-[var(--brand-teal)] focus:ring-offset-2 focus:ring-offset-slate-950"
+              style={
+                {
+                  "--brand-teal": BRAND.teal,
+                } as React.CSSProperties
+              }
+            />
+          </div>
+
+          <div className="space-y-1.5">
+            <label
+              htmlFor="confirmPassword"
+              className="text-xs font-medium uppercase tracking-wide text-slate-300"
+            >
+              Confirm Password
+            </label>
+            <input
+              id="confirmPassword"
+              type="password"
+              required
+              placeholder="Re-enter your password"
+              className="w-full rounded-xl border border-slate-700 bg-slate-950/60 px-3 py-2.5 text-sm text-slate-50 placeholder:text-slate-500 focus:outline-none focus:ring-2 focus:ring-[var(--brand-teal)] focus:ring-offset-2 focus:ring-offset-slate-950"
+              style={
+                {
+                  "--brand-teal": BRAND.teal,
+                } as React.CSSProperties
+              }
+            />
+          </div>
+
+          <button
+            type="submit"
+            className="mt-4 inline-flex w-full items-center justify-center rounded-xl px-4 py-2.5 text-sm font-semibold text-slate-950 shadow-lg transition hover:shadow-xl"
+            style={{
+              backgroundImage: `linear-gradient(135deg, ${BRAND.teal}, ${BRAND.gold})`,
+            }}
+          >
+            Create Account & Access Your Course
+          </button>
+        </form>
+
+        {/* Helper links */}
+        <div className="mt-6 space-y-2 text-xs text-slate-300">
+          <p>
+            Already have an account?{" "}
+            <a
+              href="/login"
+              className="font-semibold"
+              style={{ color: BRAND.teal }}
+            >
+              Log in here
+            </a>
+            .
           </p>
 
-          {submitted ? (
-            <div className="mt-4 rounded-2xl border border-emerald-200 bg-emerald-50 px-4 py-3 text-sm text-emerald-800">
-              <p className="font-semibold">Account details received ✅</p>
-              <p className="mt-1">
-                Your account information has been captured. Next, check your
-                inbox for your login confirmation email. If you don’t see it,
-                please check your promotions or spam folder.
-              </p>
-            </div>
-          ) : (
-            <form onSubmit={handleSubmit} className="mt-2 space-y-4">
-              <div className="grid grid-cols-1 gap-3 sm:grid-cols-2">
-                <div>
-                  <label className="block text-xs font-semibold text-slate-700 mb-1">
-                    First Name
-                  </label>
-                  <input
-                    type="text"
-                    name="firstName"
-                    required
-                    className="w-full rounded-xl border border-slate-200 px-3 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-[#0097B2] focus:border-[#0097B2]"
-                  />
-                </div>
-                <div>
-                  <label className="block text-xs font-semibold text-slate-700 mb-1">
-                    Last Name
-                  </label>
-                  <input
-                    type="text"
-                    name="lastName"
-                    required
-                    className="w-full rounded-xl border border-slate-200 px-3 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-[#0097B2] focus:border-[#0097B2]"
-                  />
-                </div>
-              </div>
-
-              <div>
-                <label className="block text-xs font-semibold text-slate-700 mb-1">
-                  Email Address (same as purchase)
-                </label>
-                <input
-                  type="email"
-                  name="email"
-                  required
-                  className="w-full rounded-xl border border-slate-200 px-3 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-[#0097B2] focus:border-[#0097B2]"
-                />
-                <p className="mt-1 text-[11px] text-slate-500">
-                  This must match the email you used at checkout so HubSpot can
-                  attach your course access correctly.
-                </p>
-              </div>
-
-              <div className="grid grid-cols-1 gap-3 sm:grid-cols-2">
-                <div>
-                  <label className="block text-xs font-semibold text-slate-700 mb-1">
-                    Create Password
-                  </label>
-                  <input
-                    type="password"
-                    name="password"
-                    minLength={8}
-                    required
-                    className="w-full rounded-xl border border-slate-200 px-3 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-[#0097B2] focus:border-[#0097B2]"
-                  />
-                  <p className="mt-1 text-[11px] text-slate-500">
-                    Minimum 8 characters. You&apos;ll use this to log in to your
-                    course portal.
-                  </p>
-                </div>
-                <div>
-                  <label className="block text-xs font-semibold text-slate-700 mb-1">
-                    Confirm Password
-                  </label>
-                  <input
-                    type="password"
-                    name="confirmPassword"
-                    minLength={8}
-                    required
-                    className="w-full rounded-xl border border-slate-200 px-3 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-[#0097B2] focus:border-[#0097B2]"
-                  />
-                </div>
-              </div>
-
-              <button
-                type="submit"
-                disabled={isSubmitting}
-                className="mt-2 inline-flex w-full items-center justify-center rounded-xl px-4 py-2.5 text-sm font-semibold text-white shadow-md transition hover:shadow-lg disabled:opacity-60"
-                style={{
-                  backgroundImage: `linear-gradient(135deg, ${BRAND.teal}, ${BRAND.gold})`,
-                }}
-              >
-                {isSubmitting ? "Creating your account..." : "Create Account"}
-              </button>
-
-              <p className="text-[11px] text-slate-500 text-center mt-2">
-                By continuing, you agree to receive course-related emails about
-                your{" "}
-                <span className="font-semibold">
-                  Rise to Thrive Foundation Course
-                </span>{" "}
-                and portal access.
-              </p>
-            </form>
-          )}
-
-          {/* Already have account */}
-          <div className="mt-5 border-t border-slate-100 pt-4 text-center">
-            <p className="text-xs text-slate-600 mb-2">
-              Already created your account?
-            </p>
+          <p>
+            Already logged in and just need the course portal?{" "}
             <a
-              href="/auth/login"
-              className="inline-flex items-center justify-center rounded-full border border-slate-300 px-4 py-1.5 text-xs font-semibold text-slate-700 hover:bg-slate-50"
+              href="/foundation/start"
+              className="font-semibold"
+              style={{ color: BRAND.gold }}
             >
-              Go to Login Portal
+              Go to your Foundation Course portal
             </a>
-          </div>
+            .
+          </p>
+
+          <p className="mt-3 text-[11px] text-slate-400">
+            By creating an account, you agree to our{" "}
+            <a
+              href="https://foundation.risetothrive-academy.com/privacy"
+              className="underline"
+              style={{ color: BRAND.teal }}
+            >
+              Privacy Policy
+            </a>{" "}
+            and{" "}
+            <a
+              href="https://foundation.risetothrive-academy.com/disclaimer"
+              className="underline"
+              style={{ color: BRAND.teal }}
+            >
+              Terms of Service
+            </a>
+            .
+          </p>
         </div>
       </div>
     </main>

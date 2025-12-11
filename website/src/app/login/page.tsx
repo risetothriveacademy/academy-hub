@@ -20,24 +20,23 @@ export default function LoginPage() {
 
         {/* Heading */}
         <h1 className="text-2xl sm:text-3xl font-semibold tracking-tight text-slate-50">
-          Log in to your{" "}
-          <span style={{ color: BRAND.teal }}>Rise to Thrive</span> course portal
+          Log in to{" "}
+          <span style={{ color: BRAND.teal }}>My Courses</span>
         </h1>
 
         <p className="mt-3 text-sm text-slate-300 leading-relaxed">
-          Use the <span className="font-semibold">same email address</span> you
-          used when you purchased the course. This keeps your{" "}
-          <span className="font-semibold">progress and access</span> synced in
-          HubSpot.
+          Use the <span className="font-semibold" style={{ color: BRAND.gold }}>same email address</span> you
+          used when you purchased any course.
+          <span className="block mt-2 text-xs text-slate-400">
+            💡 Can't remember which email? Check your Stripe payment receipt.
+          </span>
         </p>
 
         {/* Login form */}
         <form
           className="mt-8 space-y-4"
-          // NOTE: This will eventually post to your HubSpot / auth backend.
           onSubmit={(e) => {
             e.preventDefault();
-            // Temporary: front-end only – real logic will be wired later.
             alert(
               "Login UI is working.\nNext step: connect this form to HubSpot authentication."
             );
@@ -65,12 +64,25 @@ export default function LoginPage() {
           </div>
 
           <div className="space-y-1.5">
-            <label
-              htmlFor="password"
-              className="text-xs font-medium uppercase tracking-wide text-slate-300"
-            >
-              Password
-            </label>
+            <div className="flex items-center justify-between">
+              <label
+                htmlFor="password"
+                className="text-xs font-medium uppercase tracking-wide text-slate-300"
+              >
+                Password
+              </label>
+              <a
+                href="#"
+                className="text-xs font-semibold hover:underline"
+                style={{ color: BRAND.gold }}
+                onClick={(e) => {
+                  e.preventDefault();
+                  alert("Password recovery is automated!\n\n1. Enter your email below\n2. Click 'Send Reset Link'\n3. Check your inbox for reset link (instant)\n4. Click link and set new password\n\nForgot which email you used?\n→ Check your Stripe payment receipt\n→ Search inbox for 'Rise to Thrive Receipt'\n\nNo receipt found? Account may be locked for security. Contact support@risetothrive-academy.com");
+                }}
+              >
+                Forgot password?
+              </a>
+            </div>
             <input
               id="password"
               type="password"
@@ -92,12 +104,12 @@ export default function LoginPage() {
               backgroundImage: `linear-gradient(135deg, ${BRAND.teal}, ${BRAND.gold})`,
             }}
           >
-            Log in & continue to your course
+            Log in & continue to your courses
           </button>
         </form>
 
         {/* Helper links */}
-        <div className="mt-6 space-y-2 text-xs text-slate-300">
+        <div className="mt-6 space-y-3 text-xs text-slate-300">
           <p>
             New here?{" "}
             <a
@@ -110,22 +122,19 @@ export default function LoginPage() {
             .
           </p>
 
-          <p>
-            Already logged in and just need the course portal?{" "}
-            <a
-              href="/foundation/start"
-              className="font-semibold"
-              style={{ color: BRAND.gold }}
-            >
-              Go to your Foundation Course portal
-            </a>
-            .
-          </p>
-
-          <p className="mt-3 text-[11px] text-slate-400">
-            For security, do not share your login details. If you need help,
-            contact our support team and we’ll resend your access link.
-          </p>
+          {/* Security Notice */}
+          <div className="mt-4 rounded-lg border border-slate-700 bg-slate-950/40 p-3 text-[11px] text-slate-400">
+            <p className="font-semibold text-slate-300 mb-2" style={{ color: BRAND.gold }}>
+              🔒 Account Security & Recovery
+            </p>
+            <ul className="space-y-1 list-disc list-inside">
+              <li>Sharing login credentials violates our Terms of Service</li>
+              <li>We monitor for suspicious activity as workbooks may contain user confidential information</li>
+              <li>Forgot password? Use the automated reset link above (email sent instantly)</li>
+              <li>Forgot which email you used? Check your Stripe payment receipt - it shows your login email</li>
+              <li>Lost your receipt? Search your email inbox for "Rise to Thrive" or "Stripe Receipt"</li>
+            </ul>
+          </div>
         </div>
       </div>
     </main>

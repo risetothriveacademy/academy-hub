@@ -1,9 +1,9 @@
 "use client";
-import { useEffect } from "react";
+import { useEffect, Suspense } from "react";
 import { useSearchParams } from "next/navigation";
 import Link from "next/link";
 
-export default function ThankYouPage() {
+function ThankYouContent() {
   const searchParams = useSearchParams();
 
   useEffect(() => {
@@ -12,7 +12,7 @@ export default function ThankYouPage() {
     const currency = (searchParams.get("currency") || "USD").toUpperCase();
     const value = amountParam ? Number(amountParam) : undefined;
 
-    const gtag = (window as any).gtag;
+    const gtag = (window as unknown as { gtag?: (...args: unknown[]) => void }).gtag;
     if (gtag && value) {
       try {
         gtag("event", "purchase", {
@@ -22,7 +22,7 @@ export default function ThankYouPage() {
         });
       } catch {}
     }
-    const dl = (window as any).dataLayer;
+    const dl = (window as unknown as { dataLayer?: { push: (data: unknown) => void } }).dataLayer;
     if (dl && value) {
       try {
         dl.push({
@@ -57,5 +57,19 @@ export default function ThankYouPage() {
         <p className="mt-4 text-xs opacity-70">If you didn't receive your access email, contact support.</p>
       </section>
     </main>
+  );
+}
+
+export default function ThankYouPage() {
+  return (
+    <Suspense fallback={
+      <main className="min-h-screen bg-white text-[#3B3B3B] flex items-center justify-center">
+        <div className="text-center">
+          <p className="text-lg">Loading...</p>
+        </div>
+      </main>
+    }>
+      <ThankYouContent />
+    </Suspense>
   );
 }

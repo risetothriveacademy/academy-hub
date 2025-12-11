@@ -1,6 +1,6 @@
 export default function FoundationPage() {
   return (
-    <main className="min-h-screen px-4 py-16 max-w-3xl mx-auto">
+    <div className="min-h-screen bg-slate-950 px-4 py-16 max-w-3xl mx-auto">
       <h1 className="text-3xl font-semibold text-[#0097B2]">
         Foundation Course Portal
       </h1>
@@ -15,6 +15,6 @@ export default function FoundationPage() {
         ✅ Safe step completed: the <code>/foundation</code> route now exists
         inside your integrated hub (academy-hub).
       </p>
-    </main>
+    </div>
   );
 }

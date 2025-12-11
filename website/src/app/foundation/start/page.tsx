@@ -2,7 +2,7 @@
 
 export default function FoundationStartPage() {
   return (
-    <main className="min-h-screen flex items-center justify-center px-4">
+    <div className="min-h-screen bg-white flex items-center justify-center px-4">
       <div className="max-w-md w-full rounded-2xl border border-gray-200 bg-white p-6 shadow-sm bg-white/80 backdrop-blur">
         <h1 className="text-2xl font-semibold text-gray-900">
           Foundation Course — Start Day 1
@@ -26,6 +26,6 @@ export default function FoundationStartPage() {
           Tip: Bookmark the portal page so you can return to your lessons anytime.
         </p>
       </div>
-    </main>
+    </div>
   );
 }
