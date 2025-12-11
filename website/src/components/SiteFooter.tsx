@@ -31,8 +31,8 @@ export default function SiteFooter() {
             <h4 className="font-semibold text-slate-200">Legal</h4>
             <ul className="mt-2 space-y-2 text-sm text-slate-400">
               <li><Link href="/disclosures/universal-legal-disclosures" className="hover:text-[#0097B2] transition-colors">Universal Legal Disclosures</Link></li>
-              <li><Link href="https://foundation.risetothrive-academy.com/privacy" className="hover:text-[#0097B2] transition-colors">Privacy Policy</Link></li>
-              <li><Link href="https://foundation.risetothrive-academy.com/disclaimer" className="hover:text-[#0097B2] transition-colors">Terms of Service</Link></li>
+              <li><Link href="/privacy" className="hover:text-[#0097B2] transition-colors">Privacy Policy</Link></li>
+              <li><Link href="/terms" className="hover:text-[#0097B2] transition-colors">Terms of Service</Link></li>
             </ul>
           </div>
         </div>
