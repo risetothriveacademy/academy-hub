@@ -206,15 +206,6 @@ function CourseCard({ course }: { course: typeof MINI_COURSES[0] }) {
         {course.title}
       </h3>
 
-      {/* Course Meta - Workbook Status */}
-      <div className="mb-4">
-        <Link href={`/workbook/${course.slug}`}>
-          <span className="inline-flex items-center rounded-full bg-gradient-to-r from-[#0097B2] to-[#DB910F] px-3 py-1 text-xs font-semibold text-white cursor-pointer hover:shadow-lg transition-all">
-            📖 View Workbook
-          </span>
-        </Link>
-      </div>
-
       {/* Learn More Accordion */}
       {isExpanded && (
         <div className="mb-4 rounded-lg bg-slate-800/60 p-4 border border-slate-700 animate-in slide-in-from-top-2">
@@ -252,6 +243,11 @@ function CourseCard({ course }: { course: typeof MINI_COURSES[0] }) {
             {isProcessing ? 'Processing...' : 'Enroll Now — $49'}
           </div>
         </button>
+
+        {/* Workbook Access Note */}
+        <p className="mt-1 text-xs text-center" style={{ color: "#4db8c9" }}>
+          Guided workbook is available inside the course portal after purchase.
+        </p>
       </div>
     </div>
   );
