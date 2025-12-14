@@ -1,7 +1,8 @@
 "use client";
 
 import Link from "next/link";
-import { useState } from "react";
+import { useState, useEffect, useRef } from "react";
+import { useSearchParams } from "next/navigation";
 
 const BRAND = {
   teal: "#0097B2",
@@ -157,9 +158,28 @@ const MINI_COURSES = [
 ];
 
 // Course Card Component with Learn More Accordion
-function CourseCard({ course }: { course: typeof MINI_COURSES[0] }) {
-  const [isExpanded, setIsExpanded] = useState(false);
+function CourseCard({
+  course,
+  isRecommended = false,
+  cardRef
+}: {
+  course: typeof MINI_COURSES[0];
+  isRecommended?: boolean;
+  cardRef?: React.RefObject<HTMLDivElement>;
+}) {
+  const [isExpanded, setIsExpanded] = useState(isRecommended);
   const [isProcessing, setIsProcessing] = useState(false);
+
+  // Auto-expand recommended course
+  useEffect(() => {
+    if (isRecommended) {
+      setIsExpanded(true);
+      // Scroll to recommended course after a short delay
+      setTimeout(() => {
+        cardRef?.current?.scrollIntoView({ behavior: 'smooth', block: 'center' });
+      }, 300);
+    }
+  }, [isRecommended, cardRef]);
 
   const handleEnrollClick = async () => {
     setIsProcessing(true);
@@ -193,7 +213,21 @@ function CourseCard({ course }: { course: typeof MINI_COURSES[0] }) {
   };
 
   return (
-    <div className="group relative rounded-2xl border-2 border-slate-700 bg-slate-900/90 backdrop-blur-sm p-6 shadow-lg transition-all hover:shadow-2xl hover:border-[#DB910F]">
+    <div
+      ref={cardRef}
+      className={`group relative rounded-2xl border-2 bg-slate-900/90 backdrop-blur-sm p-6 shadow-lg transition-all hover:shadow-2xl ${
+        isRecommended
+          ? 'border-[#DB910F] ring-2 ring-[#DB910F]/50 shadow-2xl'
+          : 'border-slate-700 hover:border-[#DB910F]'
+      }`}
+    >
+      {/* Recommended Badge */}
+      {isRecommended && (
+        <div className="absolute -top-3 left-6 px-4 py-1 bg-gradient-to-r from-[#DB910F] to-[#0097B2] rounded-full shadow-lg">
+          <span className="text-xs font-bold text-white">⭐ Recommended for you</span>
+        </div>
+      )}
+
       {/* Course Number Badge */}
       <div className="absolute top-4 right-4">
         <span className="inline-flex h-10 w-10 items-center justify-center rounded-full bg-gradient-to-br from-[#DB910F] to-[#0097B2] text-sm font-bold text-white">
@@ -254,6 +288,17 @@ function CourseCard({ course }: { course: typeof MINI_COURSES[0] }) {
 }
 
 export default function MiniCoursesHub() {
+  const searchParams = useSearchParams();
+  const recommendedSlug = searchParams.get('course');
+
+  // Create refs for each course card
+  const cardRefs = useRef<{ [key: string]: React.RefObject<HTMLDivElement> }>(
+    MINI_COURSES.reduce((acc, course) => {
+      acc[course.slug] = useRef<HTMLDivElement>(null);
+      return acc;
+    }, {} as { [key: string]: React.RefObject<HTMLDivElement> })
+  );
+
   return (
     <main className="min-h-screen bg-slate-950">
       {/* Hero Section - Root-Cause Recovery */}
@@ -310,7 +355,12 @@ export default function MiniCoursesHub() {
 
         <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
           {MINI_COURSES.map((course) => (
-            <CourseCard key={course.slug} course={course} />
+            <CourseCard
+              key={course.slug}
+              course={course}
+              isRecommended={course.slug === recommendedSlug}
+              cardRef={cardRefs.current[course.slug]}
+            />
           ))}
         </div>
       </section>
