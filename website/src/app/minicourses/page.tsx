@@ -1,7 +1,7 @@
 "use client";
 
 import Link from "next/link";
-import { useState, useEffect, useRef } from "react";
+import React, { useState, useEffect, useRef } from "react";
 import { useSearchParams } from "next/navigation";
 
 const BRAND = {
@@ -294,7 +294,7 @@ export default function MiniCoursesHub() {
   // Create refs for each course card
   const cardRefs = useRef<{ [key: string]: React.RefObject<HTMLDivElement> }>(
     MINI_COURSES.reduce((acc, course) => {
-      acc[course.slug] = useRef<HTMLDivElement>(null);
+      acc[course.slug] = React.createRef<HTMLDivElement>();
       return acc;
     }, {} as { [key: string]: React.RefObject<HTMLDivElement> })
   );
