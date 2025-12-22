@@ -1,27 +1,45 @@
-<!doctype html><html lang="en"><head>
-<meta charset="utf-8"/><meta name="viewport" content="width=device-width,initial-scale=1"/>
-<title>Mastermind — Growth & Accountability</title>
-<script src="https://cdn.tailwindcss.com"></script>
-<style>.btn{display:inline-flex;align-items:center;justify-content:center;border-radius:.75rem;padding:.75rem 1.25rem;font-weight:600;border:1px solid #e5e7eb}.btn-primary{background:#DB910F;color:#fff;border:none}</style>
-</head><body class="bg-white text-neutral-800">
-<main class="max-w-4xl mx-auto px-6 py-10">
-  <a href="/" class="text-sm underline">← All courses</a>
-  <h1 class="mt-2 text-3xl font-extrabold">Mastermind — Growth & Accountability</h1>
-  <p class="mt-2 text-neutral-600">Cohort-based coaching with live sessions and implementation support.</p>
-  <div class="grid md:grid-cols-2 gap-6 mt-6">
-    <div class="p-6 border rounded-2xl">
-      <h2 class="font-semibold">Who it’s for</h2>
-      <ul class="list-disc pl-5 mt-2 space-y-1">
-        <li>Graduates of Foundation</li><li>Leaders who want structure</li><li>Community progress</li>
-      </ul>
-    </div>
-    <div class="p-6 border rounded-2xl">
-      <h2 class="font-semibold">Enroll</h2>
-      <p class="mt-2 text-neutral-600">Go to the Mastermind landing page for pricing & dates:</p>
-      <div class="mt-3 flex gap-3">
-        <a class="btn btn-primary" href="https://risetothrive-academy.com/mastermind/checkout" target="_blank">Go to Mastermind landing</a>
-      </div>
-    </div>
-  </div>
-</main>
-</body></html>
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Rise to Thrive Academy™ - #1 Faith-Based Trauma Healing & Business Breakthrough Program</title>
+    <meta name="description" content="Transform your life in 8 weeks with our revolutionary faith-driven recovery system. Break free from trauma, anxiety, and financial stress through proven biblical healing strategies. Over 1,000+ successful transformations. Start your breakthrough today!" />
+
+    <!-- Facebook Pixel Code -->
+    <script>
+      !function(f,b,e,v,n,t,s)
+      {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+      n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+      if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+      n.queue=[];t=b.createElement(e);t.async=!0;
+      t.src=v;s=b.getElementsByTagName(e)[0];
+      s.parentNode.insertBefore(t,s)}(window, document,'script',
+      'https://connect.facebook.net/en_US/fbevents.js');
+
+      // Replace 'YOUR_PIXEL_ID' with your actual Facebook Pixel ID
+      // fbq('init', 'YOUR_PIXEL_ID');
+      fbq('track', 'PageView');
+    </script>
+    <noscript>
+      <!-- Replace 'YOUR_PIXEL_ID' with your actual Facebook Pixel ID -->
+      <!-- <img height="1" width="1" style="display:none" src="https://www.facebook.com/tr?id=YOUR_PIXEL_ID&ev=PageView&noscript=1" /> -->
+    </noscript>
+
+    <!-- Google Analytics 4 -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=GA_MEASUREMENT_ID"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      // Replace 'GA_MEASUREMENT_ID' with your actual Google Analytics 4 ID
+      // gtag('config', 'GA_MEASUREMENT_ID');
+    </script>
+  </head>
+  <body>
+    <div id="root"></div>
+    <script type="module" src="/src/main.tsx"></script>
+  </body>
+</html>
