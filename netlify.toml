@@ -4,7 +4,7 @@
 [build]
   base = "website"
   command = "bun install && bun run build"
-  # Don't set publish directory - the @netlify/plugin-nextjs handles this automatically
+  publish = ".next"
 
 [build.environment]
   NODE_VERSION = "20"
