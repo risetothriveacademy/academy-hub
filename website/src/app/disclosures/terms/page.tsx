@@ -63,7 +63,7 @@ export default function TermsOfServicePage() {
           {/* Link to Full Document */}
           <div className="flex justify-center">
             <Link
-              href="/disclosures/universal-legal-disclosures"
+             https://academy-hub-masterfile.netlify.app/disclosures/universal-legal-disclosures
               className="inline-flex items-center gap-2 px-6 py-3 rounded-lg font-bold text-white transition-all hover:shadow-lg"
               style={{
                 background: `linear-gradient(135deg, ${BRAND.teal}, ${BRAND.gold})`
