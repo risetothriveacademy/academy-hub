@@ -36,10 +36,10 @@ export default function LoginPage() {
         <form
           className="mt-8 space-y-4"
           onSubmit={(e) => {
-  e.preventDefault();
-  // TODO: connect login to HubSpot auth
-}}
-     >
+        e.preventDefault();
+        // TODO: connect create-account to HubSpot auth
+         }}
+
           <div className="space-y-1.5">
             <label
               htmlFor="email"
