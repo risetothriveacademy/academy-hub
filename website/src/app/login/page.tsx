@@ -33,12 +33,7 @@ export default function LoginPage() {
         </p>
 
         {/* Login form */}
-        <form
-          className="mt-8 space-y-4"
-          onSubmit={(e) => {
-        e.preventDefault();
-        // TODO: connect login to GoHighLevel (GHL) auth / membership
-         }}
+       <form className="mt-8 space-y-4">
          >
           <div className="space-y-1.5">
             <label
