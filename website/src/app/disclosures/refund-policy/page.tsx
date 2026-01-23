@@ -59,7 +59,6 @@ export default function RefundPolicyPage() {
           {/* Link to Full Document */}
           <div className="flex justify-center">
             <Link
-              <Link
           href="https://academy-hub-masterfile.netlify.app/disclosures/universal-legal-disclosures"
           className="inline-flex items-center gap-2 px-6 py-3 rounded-lg font-bold text-white transition-all hover:shadow-lg"
           style={{
