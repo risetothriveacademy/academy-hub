@@ -33,11 +33,7 @@ export default function CreateAccountPage() {
 
         {/* Create Account form */}
         <form
-          className="mt-8 space-y-4"
-          onSubmit={(e) => {
-            e.preventDefault();
-            // TODO: connect create-account to GoHighLevel (GHL) auth / membership
-          }}
+          className="mt-8 space-y-4"         
         >
           <div className="grid gap-4 md:grid-cols-2">
             <div className="space-y-1.5">
