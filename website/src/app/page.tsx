@@ -262,8 +262,11 @@ export default function Home() {
               <div className="mt-6 flex items-center justify-between">
                 <span className="text-2xl font-bold text-[#0097B2]">$99</span>
                 <Link
-                  href="https://foundation.risetothrive-academy.com/offer-video-a"
-                  className="inline-flex items-center gap-2 text-[#0097B2] font-semibold hover:gap-3 transition-all"
+                href="https://academy-hub-masterfile.netlify.app/disclosures/universal-legal-disclosures"
+                className="inline-flex items-center gap-2 px-6 py-3 rounded-lg font-bold text-white transition-all hover:shadow-lg"
+                style={{
+                background: `linear-gradient(135deg, ${BRAND.teal}, ${BRAND.gold})`
+                }}
                 >
                   Enroll Now
                   <svg className="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
