@@ -39,7 +39,7 @@ export default function LoginPage() {
         e.preventDefault();
         // TODO: connect create-account to HubSpot auth
          }}
-
+         >
           <div className="space-y-1.5">
             <label
               htmlFor="email"
