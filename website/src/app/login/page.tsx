@@ -34,7 +34,7 @@ export default function LoginPage() {
 
         {/* Login form */}
        <form className="mt-8 space-y-4">
-         >
+    
           <div className="space-y-1.5">
             <label
               htmlFor="email"
