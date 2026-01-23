@@ -36,12 +36,10 @@ export default function LoginPage() {
         <form
           className="mt-8 space-y-4"
           onSubmit={(e) => {
-            e.preventDefault();
-            alert(
-              "Login UI is working.\nNext step: connect this form to HubSpot authentication."
-            );
-          }}
-        >
+  e.preventDefault();
+  // TODO: connect login to HubSpot auth
+}}
+     >
           <div className="space-y-1.5">
             <label
               htmlFor="email"
