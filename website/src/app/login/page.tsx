@@ -37,7 +37,7 @@ export default function LoginPage() {
           className="mt-8 space-y-4"
           onSubmit={(e) => {
         e.preventDefault();
-        // TODO: connect create-account to HubSpot auth
+        // TODO: connect login to GoHighLevel (GHL) auth / membership
          }}
          >
           <div className="space-y-1.5">
