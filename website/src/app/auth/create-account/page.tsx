@@ -36,9 +36,7 @@ export default function CreateAccountPage() {
           className="mt-8 space-y-4"
           onSubmit={(e) => {
             e.preventDefault();
-            alert(
-              "Create account UI is working.\nNext step: connect this form to HubSpot authentication."
-            );
+            // TODO: connect create-account to GoHighLevel (GHL) auth / membership
           }}
         >
           <div className="grid gap-4 md:grid-cols-2">
