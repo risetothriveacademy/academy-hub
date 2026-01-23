@@ -43,11 +43,11 @@ export default function PrivacyPolicyPage() {
           {/* Link to Full Document */}
           <div className="flex justify-center">
             <Link
-              https://academy-hub-masterfile.netlify.app/disclosures/universal-legal-disclosures
-              className="inline-flex items-center gap-2 px-6 py-3 rounded-lg font-bold text-white transition-all hover:shadow-lg"
-              style={{
-                background: `linear-gradient(135deg, ${BRAND.teal}, ${BRAND.gold})`
-              }}
+            href="https://academy-hub-masterfile.netlify.app/disclosures/universal-legal-disclosures"
+            className="inline-flex items-center gap-2 px-6 py-3 rounded-lg font-bold text-white transition-all hover:shadow-lg"
+            style={{
+            background: `linear-gradient(135deg, ${BRAND.teal}, ${BRAND.gold})`,
+            }}
             >
               🔗 View the full Universal Legal Disclosures
               <svg className="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
