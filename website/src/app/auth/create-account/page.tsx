@@ -32,7 +32,10 @@ export default function CreateAccountPage() {
         </p>
 
         {/* Create Account form */}
-        <form
+        <form onSubmit={(e) => {
+  e.preventDefault();
+  window.location.href = "/foundation/start";
+}}
           className="mt-8 space-y-4"         
         >
           <div className="grid gap-4 md:grid-cols-2">
