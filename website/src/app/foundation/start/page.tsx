@@ -15,7 +15,7 @@ export default function FoundationStartPage() {
         </p>
 
         <a
-          href="/foundation/day-1"
+          href="https://foundation-course-portal.risetothrive-academy.com/foundation-course"
           className="mt-6 inline-flex w-full items-center justify-center rounded-xl border border-gray-300 px-4 py-2 text-sm font-semibold text-gray-700 hover:bg-gray-50"
           title="Go to your Foundation Course portal"
         >
