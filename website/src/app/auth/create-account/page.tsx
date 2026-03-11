@@ -34,7 +34,7 @@ export default function CreateAccountPage() {
         {/* Create Account form */}
         <form onSubmit={(e) => {
   e.preventDefault();
-  window.location.href = "/foundation";
+  window.location.href = "https://foundation-course-portal.risetothrive-academy.com/foundation-course";
 }}
           className="mt-8 space-y-4"         
         >
@@ -173,7 +173,7 @@ export default function CreateAccountPage() {
           <p>
             Already logged in and just need the course portal?{" "}
             <a
-              href="/foundation"
+              href="https://foundation-course-portal.risetothrive-academy.com/foundation-course"
               className="font-semibold"
               style={{ color: BRAND.gold }}
             >
