@@ -168,27 +168,7 @@ export default function CreateAccountPage() {
               Log in here
             </a>
             .
-          </p>
-
-          <p className="mt-3 text-[11px] text-slate-400">
-            By creating an account, you agree to our{" "}
-            <a
-             href="/disclosures/universal-legal-disclosures"
-              className="underline"
-              style={{ color: BRAND.teal }}
-            >
-              Privacy Policy
-            </a>{" "}
-            and{" "}
-            <a
-              href="/disclosures/universal-legal-disclosures"
-              className="underline"
-              style={{ color: BRAND.teal }}
-            >
-              Terms of Service
-            </a>
-            .
-          </p>
+          </p>       
         </div>
       </div>
     </main>
