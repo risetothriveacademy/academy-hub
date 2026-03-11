@@ -33,9 +33,14 @@ export default function LoginPage() {
         </p>
 
         {/* Login form */}
-       <form className="mt-8 space-y-4">
-    
-          <div className="space-y-1.5">
+      <form
+onSubmit={(e) => {
+    e.preventDefault();
+    window.location.href = "https://foundation-course-portal.risetothrive-academy.com/foundation-course";
+  }}
+  className="mt-8 space-y-4"
+>
+ <div className="space-y-1.5">
             <label
               htmlFor="email"
               className="text-xs font-medium uppercase tracking-wide text-slate-300"
