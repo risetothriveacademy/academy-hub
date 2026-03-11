@@ -78,19 +78,22 @@ Users agree to participate responsibly and not misuse platform
 resources or interfere with the experience of other participants.
 
 ---
+SECTION 4 — REFUND POLICY
 
-# SECTION 4 — REFUND POLICY
+Digital courses, coaching programs, and downloadable educational materials may be delivered immediately upon purchase.
 
-Digital courses, coaching programs, and downloadable educational
-materials may be delivered immediately upon purchase.
+Unless otherwise explicitly stated at the point of purchase, all sales are considered final and non-refundable.
 
-Unless otherwise explicitly stated at the point of purchase,
-all sales are considered final and non-refundable.
+Because digital products can be accessed instantly, refunds may not be available once program access has been granted.
 
-Because digital products can be accessed instantly, refunds may not
-be available once program access has been granted.
+Chargeback & Payment Dispute Policy
 
----
+By purchasing any digital program, course, coaching service, or membership offered through our platforms, you agree to contact our support team first at support@risetothrive-academy.com
+to resolve any billing or service concerns before initiating a chargeback, dispute, or payment reversal through your bank or credit card provider.
+
+Initiating a chargeback without first attempting resolution through our support process may be considered a violation of these Terms. In such cases, we reserve the right to suspend or terminate access to all purchased programs, courses, and services while the dispute is under review.
+
+We reserve the right to provide documentation to payment processors, banks, or dispute investigators demonstrating that the purchaser agreed to these Terms, received access to the purchased digital materials, and was provided the opportunity to contact support for resolution prior to initiating a dispute.
 
 # SECTION 5 — PAYMENT DISPUTES AND CHARGEBACKS
 
