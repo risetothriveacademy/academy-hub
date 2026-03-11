@@ -75,8 +75,8 @@ onSubmit={(e) => {
                 style={{ color: BRAND.gold }}
                 onClick={(e) => {
                   e.preventDefault();
-                  alert("Password recovery is automated!\n\n1. Enter your email below\n2. Click 'Send Reset Link'\n3. Check your inbox for reset link (instant)\n4. Click link and set new password\n\nForgot which email you used?\n→ Check your Stripe payment receipt\n→ Search inbox for 'Rise to Thrive Receipt'\n\nNo receipt found? Account may be locked for security. Contact support@risetothrive-academy.com");
-                }}
+               alert("Forgot your password?\n\n1. Enter the email you used when purchasing the course\n2. Click 'Log In' or 'Create Account'\n3. If the email matches a purchase, your course access will unlock\n\nNot sure which email you used?\n→ Search your inbox for: 'Receipt from Rise To Thrive Academy'\n→ Or look for an email from stripe.com\n\nStill can't find it?\nContact support@risetothrive-academy.com");
+               }}
               >
                 Forgot password?
               </a>
