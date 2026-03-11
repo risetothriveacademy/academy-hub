@@ -170,22 +170,10 @@ export default function CreateAccountPage() {
             .
           </p>
 
-          <p>
-            Already logged in and just need the course portal?{" "}
-            <a
-              href="https://foundation-course-portal.risetothrive-academy.com/foundation-course"
-              className="font-semibold"
-              style={{ color: BRAND.gold }}
-            >
-              Go to your Foundation Course portal
-            </a>
-            .
-          </p>
-
           <p className="mt-3 text-[11px] text-slate-400">
             By creating an account, you agree to our{" "}
             <a
-              href="https://foundation.risetothrive-academy.com/privacy"
+             href="/disclosures/universal-legal-disclosures"
               className="underline"
               style={{ color: BRAND.teal }}
             >
@@ -193,7 +181,7 @@ export default function CreateAccountPage() {
             </a>{" "}
             and{" "}
             <a
-              href="https://foundation.risetothrive-academy.com/disclaimer"
+              href="/disclosures/universal-legal-disclosures"
               className="underline"
               style={{ color: BRAND.teal }}
             >
