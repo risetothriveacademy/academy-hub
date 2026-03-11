@@ -34,7 +34,7 @@ export default function CreateAccountPage() {
         {/* Create Account form */}
         <form onSubmit={(e) => {
   e.preventDefault();
-  window.location.href = "/foundation/start";
+  window.location.href = "/foundation";
 }}
           className="mt-8 space-y-4"         
         >
@@ -173,7 +173,7 @@ export default function CreateAccountPage() {
           <p>
             Already logged in and just need the course portal?{" "}
             <a
-              href="/foundation/start"
+              href="/foundation"
               className="font-semibold"
               style={{ color: BRAND.gold }}
             >
