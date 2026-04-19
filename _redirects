@@ -1,4 +1,7 @@
-/introductory-recovery/*  https://same-yk01bbvnuzb-latest.netlify.app/introductory-recovery/:splat  200
-/api/checkout             https://same-yk01bbvnuzb-latest.netlify.app/api/checkout                 200
-/sitemap.xml              https://same-yk01bbvnuzb-latest.netlify.app/sitemap.xml                   200
-/robots.txt               https://same-yk01bbvnuzb-latest.netlify.app/robots.txt                    200
+/* https://risetothrive-hub.com/:splat 301! Host=risetothrive-academy.com
+/* https://risetothrive-hub.com/:splat 301! Host=www.risetothrive-academy.com
+
+/introductory-recovery/* https://same-yk01bbvnuzb-latest.netlify.app/introductory-recovery/:splat 200
+/api/checkout https://same-yk01bbvnuzb-latest.netlify.app/api/checkout 200
+/sitemap.xml https://same-yk01bbvnuzb-latest.netlify.app/sitemap.xml 200
+/robots.txt https://same-yk01bbvnuzb-latest.netlify.app/robots.txt 200
