@@ -112,3 +112,7 @@ Run these from the project root in your local development environment.
 - **Usage:** All landing pages, sites, PDFs, and emails must reference this file.
 - **Web footnote:** Add the short disclaimer + link in the global footer/layout.
 - **Do not** create duplicate legal text in random files. If updates are needed, edit the markdown file only and redeploy.
+
+## 🔁 New-course integration standard (mandatory)
+
+Whenever a new Hub course is created or updated, follow **[Course ↔ 30-Day Devotional ↔ Retreat Workflow](docs/COURSE_DEVOTIONAL_RETREAT_WORKFLOW.md)**. It includes the reciprocal Hub invitation, stable course/journey mapping, approval gates, optional retreat link, and a **copy/paste Claude prompt** for every new course. The repository's root [CLAUDE.md](CLAUDE.md) instructs AI developers to follow the same process. The companion Devotional App also has a root `CLAUDE.md`. This documents the workflow; automated cross-repository synchronization is not yet live.
