@@ -1,0 +1,645 @@
+import type { Metadata } from "next";
+import OrganizationalResilienceForm from "@/components/OrganizationalResilienceForm";
+import SpecialtyClusterTabs from "@/components/SpecialtyClusterTabs";
+
+const siteUrl = "https://risetothrive-hub.com";
+const pageUrl = `${siteUrl}/organizational-resilience`;
+
+export const metadata: Metadata = {
+  title: "Organizational Resilience Consulting | Rise to Thrive Hub",
+  description:
+    "Protect human capacity, build resilience, and strengthen performance through AI adoption, restructuring, workforce transformation, burnout prevention, and organizational change.",
+  keywords: [
+    "organizational resilience",
+    "workforce transformation",
+    "leadership resilience",
+    "trauma-informed consulting",
+    "human capacity",
+    "employee wellbeing",
+    "change management",
+    "workforce reskilling",
+    "leadership development",
+    "burnout prevention",
+    "employee engagement",
+    "organizational recovery",
+    "executive coaching",
+    "group coaching",
+    "corporate speaking",
+    "workplace resilience",
+    "team performance",
+    "productivity",
+    "retention strategy",
+    "human performance",
+  ],
+  alternates: { canonical: pageUrl },
+  openGraph: {
+    title:
+      "Protect the Person. Build Resilience. Strengthen Performance, Productivity and Profitability.™",
+    description:
+      "Organizational resilience consulting for leaders and teams navigating pressure, disruption, AI adoption, restructuring, and workforce transformation.",
+    url: pageUrl,
+    siteName: "Rise to Thrive Hub",
+    type: "website",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Organizational Resilience Consulting | Rise to Thrive Hub",
+    description:
+      "Protect human capacity, build resilience, and strengthen sustainable performance through disruption and change.",
+  },
+  robots: { index: true, follow: true },
+};
+
+const primaryIssues = [
+  "Burnout and disengagement",
+  "Declining productivity",
+  "Absenteeism and turnover",
+  "Reduced focus and confidence",
+  "Leadership strain",
+  "Team disruption",
+  "Difficulty adapting to change",
+];
+
+const hiddenDrivers = [
+  "Grief and trauma",
+  "Financial distress",
+  "Caregiving pressure",
+  "Job insecurity",
+  "Identity disruption",
+  "Fear of redundancy",
+  "Workplace conflict",
+  "Restructuring and uncertainty",
+  "Accumulated stress",
+  "Major personal adversity",
+];
+
+const specialties = [
+  "Organizational Resilience",
+  "Workforce Transformation",
+  "Leadership Resilience",
+  "Trauma-Informed Consulting",
+  "Human Capacity",
+  "Employee Wellbeing",
+  "Change Management",
+  "Workforce Reskilling",
+  "Leadership Development",
+  "Burnout Prevention",
+  "Employee Engagement",
+  "Organizational Recovery",
+  "Executive Coaching",
+  "Group Coaching",
+  "Corporate Speaking",
+  "Workplace Resilience",
+  "Team Performance",
+  "Productivity",
+  "Retention Strategy",
+  "Human Performance",
+];
+
+const navigatingOptions = [
+  "AI adoption / automation",
+  "Workforce transformation",
+  "Restructuring",
+  "Role redesign",
+  "Redundancy / layoffs",
+  "Reskilling / internal mobility",
+  "Leadership burnout",
+  "Employee burnout",
+  "Reduced engagement",
+  "Absenteeism",
+  "Retention / turnover",
+  "Productivity concerns",
+  "Team disruption",
+  "Grief / trauma / adversity affecting employees",
+  "Sustained performance pressure",
+  "Leadership resilience",
+  "Organizational recovery",
+  "Retreat / leadership restoration experience",
+  "Speaking / keynote",
+  "Not sure — I’d like to discuss what we are seeing",
+];
+
+const improvementOptions = [
+  "Resilience",
+  "Leadership capacity",
+  "Employee engagement",
+  "Productivity",
+  "Retention",
+  "Adaptability through change",
+  "Team performance",
+  "Communication",
+  "Workforce transition",
+  "Employee support",
+  "Other",
+];
+
+const supportOptions = [
+  "Keynote / speaking",
+  "Workshop",
+  "Leadership training",
+  "Group coaching",
+  "Organizational assessment",
+  "Ongoing consulting / advisory",
+  "Retreat",
+  "Not sure — recommend the best starting point",
+];
+
+const faqs = [
+  {
+    q: "What is organizational resilience consulting?",
+    a: "Organizational resilience consulting helps leaders strengthen the human capacity required to adapt, recover, remain engaged, and sustain performance through pressure, disruption, and change.",
+  },
+  {
+    q: "Can this support organizations navigating AI and workforce transformation?",
+    a: "Yes. The work can support role transition, human transition, and identity transition during AI adoption, restructuring, role redesign, reskilling, and other major workforce changes.",
+  },
+  {
+    q: "Does Rise to Thrive Hub replace HR or clinical care?",
+    a: "No. Rise to Thrive Hub provides education, resilience consulting, leadership support, and structured organizational interventions. It does not replace HR functions, psychotherapy, diagnosis, medical care, or crisis services.",
+  },
+  {
+    q: "What if we are not sure what type of support we need?",
+    a: "Use the inquiry form and select the option asking for help identifying the right starting point. The first conversation is designed to clarify the challenge, desired outcomes, and appropriate level of support.",
+  },
+];
+
+const structuredData = {
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Organization",
+      "@id": `${siteUrl}/#organization`,
+      name: "Rise to Thrive Hub LLC",
+      url: siteUrl,
+      description:
+        "Organizational resilience, workforce transformation, leadership support, trauma-informed consulting, and human capacity development.",
+    },
+    {
+      "@type": "Person",
+      "@id": `${siteUrl}/#diane-salman`,
+      name: "Diane Salman, MBA",
+      jobTitle: "Founder, Speaker, Consultant and Trauma Recovery Educator",
+      worksFor: { "@id": `${siteUrl}/#organization` },
+    },
+    {
+      "@type": "Service",
+      "@id": `${pageUrl}/#service`,
+      name: "Organizational Resilience Consulting",
+      provider: { "@id": `${siteUrl}/#organization` },
+      url: pageUrl,
+      description:
+        "Consulting, speaking, leadership training, group coaching, organizational assessment, and resilience support for organizations navigating pressure, disruption, and workforce transformation.",
+      areaServed: "North America",
+    },
+    {
+      "@type": "FAQPage",
+      mainEntity: faqs.map((item) => ({
+        "@type": "Question",
+        name: item.q,
+        acceptedAnswer: { "@type": "Answer", text: item.a },
+      })),
+    },
+  ],
+};
+
+function SectionTitle({
+  eyebrow,
+  title,
+  text,
+}: {
+  eyebrow?: string;
+  title: string;
+  text?: string;
+}) {
+  return (
+    <div className="mx-auto mb-10 max-w-4xl text-center">
+      {eyebrow ? (
+        <p className="mb-3 text-base font-bold uppercase tracking-[0.22em] text-[#DB910F]">
+          {eyebrow}
+        </p>
+      ) : null}
+      <h2 className="text-4xl font-bold tracking-tight text-[#0097B2] sm:text-5xl">
+        {title}
+      </h2>
+      {text ? (
+        <p className="mt-5 text-lg leading-8 text-slate-600">{text}</p>
+      ) : null}
+    </div>
+  );
+}
+
+function CheckList({ items }: { items: string[] }) {
+  return (
+    <ul className="space-y-3">
+      {items.map((item) => (
+        <li key={item} className="flex gap-3 text-slate-700">
+          <span className="mt-1.5 h-2.5 w-2.5 shrink-0 rounded-full bg-[#DB910F]" />
+          <span>{item}</span>
+        </li>
+      ))}
+    </ul>
+  );
+}
+
+function CheckboxGroup({
+  legend,
+  name,
+  items,
+}: {
+  legend: string;
+  name: string;
+  items: string[];
+}) {
+  return (
+    <fieldset className="space-y-4">
+      <legend className="text-lg font-semibold text-slate-900">{legend}</legend>
+      <div className="grid gap-3 sm:grid-cols-2">
+        {items.map((item) => (
+          <label
+            key={item}
+            className="flex cursor-pointer items-start gap-3 rounded-xl border border-slate-200 bg-white p-3 transition hover:border-[#DB910F]"
+          >
+            <input
+              type="checkbox"
+              name={name}
+              value={item}
+              className="mt-1 h-4 w-4 rounded border-slate-300 accent-[#DB910F]"
+            />
+            <span className="text-sm leading-6 text-slate-700">{item}</span>
+          </label>
+        ))}
+      </div>
+    </fieldset>
+  );
+}
+
+export default function OrganizationalResiliencePage() {
+  return (
+    <main className="bg-white text-slate-900">
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(structuredData) }}
+      />
+
+      <section className="relative overflow-hidden bg-[#202833] text-white">
+        <div className="absolute inset-0 bg-[radial-gradient(circle_at_top_right,rgba(219,145,15,0.16),transparent_36%)]" />
+        <div className="relative mx-auto max-w-7xl px-6 py-16 lg:px-8 lg:py-20">
+          <div className="max-w-6xl">
+            <p className="mb-6 text-base font-bold uppercase tracking-[0.24em] text-[#DB910F] sm:text-lg">
+              Organizational Resilience • Human Capacity • Workforce Transformation
+            </p>
+
+            <h1 className="max-w-6xl space-y-1 text-4xl font-bold tracking-tight sm:text-6xl">
+              <span className="block text-white">Protect the Person.</span>
+              <span className="block text-[#0097B2]">Build Resilience.</span>
+              <span className="block text-[#DB910F]">
+                Strengthen Performance, Productivity and Profitability.™
+              </span>
+            </h1>
+
+            <p className="mt-7 text-xl font-semibold text-white sm:text-2xl">
+              Human Capacity → Resilience → Performance → Productivity → Profitability
+            </p>
+
+            <p className="mt-7 max-w-4xl text-2xl font-bold leading-9 text-[#0097B2] sm:text-3xl">
+              Technology may transform the role. Leadership must protect the person.
+            </p>
+
+            <div className="mt-9 flex flex-wrap gap-4">
+              <a
+                href="#inquiry"
+                className="rounded-full bg-[#DB910F] px-7 py-4 font-bold text-[#202833] shadow-lg transition hover:brightness-110"
+              >
+                Schedule an Organizational Resilience Conversation
+              </a>
+              <a
+                href="#speaking"
+                className="rounded-full border border-white/40 px-7 py-4 font-bold text-white transition hover:border-[#0097B2] hover:text-[#0097B2]"
+              >
+                Book Diane to Speak
+              </a>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section className="bg-white px-6 py-16 lg:px-8">
+        <div className="mx-auto max-w-7xl">
+          <SectionTitle
+            eyebrow="The Opportunity"
+            title="Close the Gap Between the Organization You Need and the Pressure Your People Carry"
+            text="A strong organization depends on human capacity. When pressure, disruption, grief, trauma, uncertainty, or workforce change weaken that capacity, the business eventually feels the cost."
+          />
+
+          <div className="grid gap-6 lg:grid-cols-3">
+            <article className="rounded-3xl border border-slate-200 bg-slate-50 p-7">
+              <p className="text-sm font-bold uppercase tracking-[0.18em] text-[#DB910F]">The Ideal Organization</p>
+              <h3 className="mt-3 text-2xl font-bold text-[#0097B2]">Built to Perform</h3>
+              <CheckList items={["Clear vision","Healthy leadership capacity","Engaged teams","Consistent execution","Sustainable growth"]} />
+            </article>
+
+            <article className="rounded-3xl border border-slate-200 bg-slate-50 p-7">
+              <p className="text-sm font-bold uppercase tracking-[0.18em] text-[#DB910F]">The Ideal Human Asset</p>
+              <h3 className="mt-3 text-2xl font-bold text-[#0097B2]">Ready to Contribute</h3>
+              <CheckList items={["Focused","Supported","Adaptable","Resilient","Able to perform under pressure"]} />
+            </article>
+
+            <article className="rounded-3xl border border-[#DB910F]/30 bg-[#FFF8E8] p-7">
+              <p className="text-sm font-bold uppercase tracking-[0.18em] text-[#B25B00]">The Reality Under Pressure</p>
+              <h3 className="mt-3 text-2xl font-bold text-slate-900">The Gap Appears</h3>
+              <CheckList items={["Burnout and disengagement","AI / restructuring uncertainty","Grief, trauma and adversity","Reduced focus and confidence","Turnover and productivity risk"]} />
+            </article>
+          </div>
+
+          <div className="mx-auto mt-8 max-w-5xl rounded-3xl bg-[#202833] p-8 text-center text-white">
+            <p className="text-sm font-bold uppercase tracking-[0.2em] text-[#DB910F]">Close the Gap</p>
+            <p className="mt-4 text-2xl font-bold leading-9 sm:text-3xl">
+              <span className="text-white">Protect the Person.</span>{" "}
+              <span className="text-[#0097B2]">Build Resilience.</span>{" "}
+              <span className="text-[#DB910F]">Strengthen Performance, Productivity and Profitability.™</span>
+            </p>
+            <p className="mx-auto mt-5 max-w-4xl leading-7 text-slate-300">
+              A proactive resilience strategy can help reduce the long-term costs of unsupported transition — including preventable turnover, rehiring, retraining, absenteeism, productivity loss, and the erosion of institutional knowledge.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <section id="business-philosophy" className="border-y border-slate-200 bg-slate-50 px-6 py-12">
+        <div className="mx-auto max-w-6xl text-center">
+          <p className="text-base font-bold uppercase tracking-[0.2em] text-[#DB910F]">Business Philosophy</p>
+          <h2 className="mt-3 text-3xl font-bold text-[#0097B2] sm:text-4xl">Human Capacity Is a Business Asset</h2>
+          <p className="mx-auto mt-4 max-w-4xl text-lg leading-8 text-slate-600">
+            Organizations protect financial assets, intellectual property, systems, infrastructure, and data. Every one of them depends on human capacity.
+          </p>
+          <p className="mt-6 text-2xl font-bold text-[#202833] sm:text-3xl">
+            Human Capacity → Resilience → Performance → Productivity → Profitability
+          </p>
+        </div>
+      </section>
+
+      <section id="workforce-transformation" className="bg-white px-6 py-20">
+        <SectionTitle
+          eyebrow="Workforce Transformation"
+          title="Every Major Organizational Change Creates Three Transitions"
+          text="Technology and process may change the work. Leaders also need a plan for the people expected to carry that change."
+        />
+        <div className="mx-auto grid max-w-7xl gap-6 lg:grid-cols-3">
+          {[
+            {
+              n: "01",
+              title: "Role Transition",
+              text: "What work is changing? What tasks are being automated? What capabilities are now required? What roles and responsibilities are shifting?",
+            },
+            {
+              n: "02",
+              title: "Human Transition",
+              text: "What is uncertainty doing to the person mentally, emotionally, behaviorally, cognitively, and physically?",
+            },
+            {
+              n: "03",
+              title: "Identity Transition",
+              text: "Who am I if the role I spent 10, 15, or 20 years mastering is no longer valued in the same way?",
+            },
+          ].map((item) => (
+            <article key={item.n} className="rounded-3xl border border-slate-200 bg-slate-50 p-8">
+              <span className="text-sm font-bold text-[#DB910F]">{item.n}</span>
+              <h3 className="mt-3 text-2xl font-bold text-[#0097B2]">{item.title}</h3>
+              <p className="mt-4 leading-7 text-slate-600">{item.text}</p>
+            </article>
+          ))}
+        </div>
+      </section>
+
+      <section id="business-problem" className="bg-slate-50 px-6 py-20">
+        <SectionTitle
+          eyebrow="The Business Problem"
+          title="The Pressure You See Is Not Always the Whole Problem"
+          text="Organizations often notice the performance change first. The individual may be living the battle underneath it."
+        />
+
+        <div className="mx-auto grid max-w-7xl gap-8 lg:grid-cols-2">
+          <div className="rounded-3xl bg-white p-8">
+            <h3 className="mb-5 text-2xl font-bold text-[#0097B2]">What the organization may see</h3>
+            <CheckList items={primaryIssues} />
+          </div>
+          <div className="rounded-3xl border border-[#DB910F]/30 bg-[#FFF8E8] p-8">
+            <h3 className="mb-5 text-2xl font-bold text-[#B25B00]">What may be happening underneath</h3>
+            <CheckList items={hiddenDrivers} />
+          </div>
+        </div>
+
+        <blockquote className="mx-auto mt-10 max-w-4xl border-l-4 border-[#DB910F] pl-6 text-2xl font-semibold leading-10 text-slate-800">
+          The organization sees the performance change. The individual is living the battle underneath it.
+        </blockquote>
+
+        <div className="mx-auto mt-14 max-w-7xl">
+          <p className="mb-6 text-center text-base font-bold uppercase tracking-[0.2em] text-[#DB910F]">
+            Proprietary Teachings
+          </p>
+          <div className="grid gap-8 lg:grid-cols-2">
+            <article className="rounded-3xl bg-[#202833] p-9 text-white">
+              <h3 className="text-3xl font-bold text-[#0097B2]">The Unseen Battle™</h3>
+              <p className="mt-5 leading-8 text-slate-200">
+                Burnout, disengagement, or declining performance may be the visible symptom. The deeper question is: what is happening underneath?
+              </p>
+              <p className="mt-6 text-xl font-semibold">
+                The first question should not always be “How do we make this person perform again?”
+              </p>
+              <p className="mt-3 text-xl font-semibold text-[#DB910F]">
+                Sometimes the better question is “What is happening underneath?”
+              </p>
+            </article>
+
+            <article className="rounded-3xl border border-[#DB910F]/30 bg-white p-9">
+              <h3 className="text-3xl font-bold text-[#0097B2]">The Inner Voice™</h3>
+              <p className="mt-5 leading-8 text-slate-700">
+                During disruption, people may privately ask: Am I still valuable? Can I learn this? Am I becoming obsolete? What happens if I lose this role?
+              </p>
+              <p className="mt-6 text-xl font-semibold text-slate-900">
+                Those are not technology questions. They are human questions.
+              </p>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section id="structured-approach" className="bg-[#202833] px-6 py-20 text-white">
+        <div className="mx-auto mb-10 max-w-4xl text-center">
+          <p className="mb-3 text-base font-bold uppercase tracking-[0.2em] text-[#DB910F]">
+            A Structured Approach
+          </p>
+          <h2 className="text-4xl font-bold tracking-tight text-[#0097B2] sm:text-5xl">
+            Five Steps for Human Resilience Through Change
+          </h2>
+          <p className="mt-5 text-lg leading-8 text-slate-300">
+            A practical structure informed by lived experience, trauma-recovery education, and organizational application.
+          </p>
+        </div>
+
+        <div className="mx-auto grid max-w-7xl gap-5 md:grid-cols-5">
+          {[
+            ["D", "Detect the Unseen Battle™", "Recognize what may be happening beneath the visible performance problem."],
+            ["I", "Identify the Root Drivers", "Understand the fear, grief, uncertainty, workload, financial insecurity, identity disruption, or adversity influencing the response."],
+            ["A", "Address the Inner Voice™", "Recognize internal messages shaping confidence, behavior, decision-making, and adaptability."],
+            ["N", "Navigate the Transition", "Move from fear, resistance, and survival mode toward informed action, adaptation, reskilling, and forward movement."],
+            ["E", "Equip for Sustainable Resilience", "Build the capacity to adapt, learn, recover, remain effective, and continue contributing through ongoing change."],
+          ].map(([letter, title, text]) => (
+            <article key={letter} className="rounded-2xl border border-white/10 bg-white/5 p-6">
+              <div className="mb-4 flex h-11 w-11 items-center justify-center rounded-full bg-[#DB910F] text-lg font-bold text-[#202833]">
+                {letter}
+              </div>
+              <h3 className="font-bold text-white">{title}</h3>
+              <p className="mt-3 text-sm leading-6 text-slate-300">{text}</p>
+            </article>
+          ))}
+        </div>
+      </section>
+
+      <section id="consultancy-model" className="bg-white px-6 py-20">
+        <SectionTitle
+          eyebrow="Consultancy Model"
+          title="From Awareness to Measurable Organizational Action"
+        />
+
+        <div className="mx-auto mb-10 flex max-w-4xl flex-wrap justify-center gap-3">
+          <a href="#economic-case" className="rounded-full border border-[#DB910F] bg-[#FFF8E8] px-5 py-2 text-sm font-bold text-[#B25B00]">
+            The Economic Case
+          </a>
+          <a href="#business-philosophy" className="rounded-full border border-[#0097B2] bg-slate-50 px-5 py-2 text-sm font-bold text-[#0097B2]">
+            Business Philosophy
+          </a>
+        </div>
+
+        <div className="mx-auto grid max-w-7xl gap-6 md:grid-cols-2 xl:grid-cols-4">
+          {[
+            ["1", "Diagnostic / Baseline", "Leadership interviews, anonymous pulse surveys, risk mapping, role-transition and resilience assessment, and priority reporting."],
+            ["2", "Implementation", "Keynotes, workshops, leadership training, manager education, group coaching, team resilience programs, and transition support."],
+            ["3", "Ongoing Monitoring", "Monthly or quarterly pulse checks, resilience and burnout indicators, engagement trends, manager feedback, and intervention recommendations."],
+            ["4", "Executive Review", "Clear reporting on what changed, where risk increased, what requires intervention, what is improving, and recommended next steps."],
+          ].map(([n, title, text]) => (
+            <article key={n} className="rounded-3xl border border-slate-200 p-7">
+              <span className="text-sm font-bold text-[#DB910F]">STAGE {n}</span>
+              <h3 className="mt-3 text-xl font-bold text-[#0097B2]">{title}</h3>
+              <p className="mt-4 leading-7 text-slate-600">{text}</p>
+            </article>
+          ))}
+        </div>
+
+        <div id="economic-case" className="mx-auto mt-14 grid max-w-7xl gap-10 rounded-3xl bg-slate-50 p-8 lg:grid-cols-2 lg:items-center sm:p-10">
+          <div>
+            <p className="text-base font-bold uppercase tracking-[0.2em] text-[#DB910F]">The Economic Case</p>
+            <h3 className="mt-3 text-3xl font-bold text-[#0097B2] sm:text-4xl">The Cost of Unsupported Transition</h3>
+            <p className="mt-5 text-lg leading-8 text-slate-600">
+              The better question is not only “What does resilience support cost?” It is “What does unsupported transition cost if we wait until a person is disengaged, absent, leaves, or must be replaced?”
+            </p>
+          </div>
+          <div className="rounded-3xl bg-white p-8 shadow-sm">
+            <h4 className="text-lg font-bold">Estimated program value can include:</h4>
+            <p className="mt-5 rounded-2xl bg-[#FFF8E8] p-5 font-semibold leading-8 text-slate-800">
+              Avoided replacement cost + reduced absence + reduced productivity loss + improved retention + retained institutional knowledge − program cost
+            </p>
+            <p className="mt-5 text-sm leading-6 text-slate-500">
+              Any ROI estimate should be based on the organization’s own data and agreed assumptions; results are not guaranteed.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <section id="who-we-help" className="bg-slate-50 px-6 py-20">
+        <SectionTitle
+          eyebrow="Who We Help"
+          title="Designed for Leaders and Organizations Navigating Change"
+        />
+        <div className="mx-auto grid max-w-6xl gap-4 sm:grid-cols-2 lg:grid-cols-4">
+          {[
+            "CEOs and business owners",
+            "Senior leadership",
+            "Middle management",
+            "Team leaders",
+            "HR leaders",
+            "Learning & development leaders",
+            "Organizations undergoing transformation",
+            "Organizations navigating sustained pressure",
+          ].map((item) => (
+            <div key={item} className="rounded-2xl bg-white p-5 text-center font-semibold shadow-sm">
+              {item}
+            </div>
+          ))}
+        </div>
+      </section>
+
+      <section id="how-we-assist" className="bg-white px-6 py-20">
+        <SectionTitle
+          eyebrow="How We Can Assist"
+          title="Workforce Transformation Support Built Around the Human Side of Performance"
+          text="The specialties are organized into six strategic solution clusters. Use the tabs to explore how the work connects; these same clusters can become the consultancy sub-pages."
+        />
+        <SpecialtyClusterTabs />
+      </section>
+
+      <section id="speaking" className="bg-[#202833] px-6 py-20 text-white">
+        <div className="mx-auto grid max-w-6xl gap-10 lg:grid-cols-2 lg:items-center">
+          <div>
+            <p className="text-sm font-semibold uppercase tracking-[0.2em] text-[#DB910F]">
+              Speaking & Leadership Experiences
+            </p>
+            <h2 className="mt-3 text-3xl font-bold sm:text-4xl">
+              Protect the Person. Build Resilience. Strengthen Performance,
+              Productivity and Profitability.™
+            </h2>
+            <p className="mt-5 leading-8 text-slate-200">
+              Diane Salman, MBA, speaks from lived experience as a former business
+              owner and trauma survivor, connecting the human impact of pressure and
+              disruption to leadership, resilience, performance, and organizational
+              sustainability.
+            </p>
+          </div>
+          <div className="rounded-3xl border border-white/10 bg-white/5 p-8">
+            <h3 className="mb-5 text-xl font-bold">Available formats</h3>
+            <ul className="space-y-3 text-slate-200">
+              {[
+                "Signature keynote",
+                "Executive and leadership workshops",
+                "Manager training",
+                "Group coaching",
+                "Organizational resilience programs",
+                "Leadership restoration and retreat experiences",
+              ].map((item) => (
+                <li key={item} className="flex gap-3">
+                  <span className="mt-1.5 h-2.5 w-2.5 shrink-0 rounded-full bg-[#DB910F]" />
+                  <span>{item}</span>
+                </li>
+              ))}
+            </ul>
+          </div>
+        </div>
+      </section>
+
+      <section id="inquiry" className="bg-[#F8FAFC] px-6 py-20">
+        <SectionTitle
+          eyebrow="Start the Conversation"
+          title="Tell Us What Your Organization Is Navigating"
+          text="Every organization is different. Tell us where you are experiencing the greatest pressure. If you are unsure where the problem sits, select the option asking us to help identify the right starting point."
+        />
+        <OrganizationalResilienceForm />
+      </section>
+
+      <section className="mx-auto max-w-7xl px-6 py-20 lg:px-8">
+        <SectionTitle eyebrow="FAQ" title="Common Questions" />
+        <div className="mx-auto max-w-4xl divide-y divide-slate-200">
+          {faqs.map((item) => (
+            <details key={item.q} className="group py-5">
+              <summary className="cursor-pointer list-none text-lg font-semibold text-slate-900">
+                {item.q}
+              </summary>
+              <p className="mt-3 leading-7 text-slate-600">{item.a}</p>
+            </details>
+          ))}
+        </div>
+      </section>
+
+
+    </main>
+  );
+}
