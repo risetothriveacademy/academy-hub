@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 
 const siteUrl = "https://risetothrive-hub.com";
-const pageUrl = \`\${siteUrl}/organizational-resilience\`;
+const pageUrl = `${siteUrl}/organizational-resilience`;
 
 export const metadata: Metadata = {
   title: "Organizational Resilience Consulting | Rise to Thrive Hub",
@@ -166,7 +166,7 @@ const structuredData = {
   "@graph": [
     {
       "@type": "Organization",
-      "@id": \`\${siteUrl}/#organization\`,
+      "@id": `${siteUrl}/#organization`,
       name: "Rise to Thrive Hub LLC",
       url: siteUrl,
       description:
@@ -174,16 +174,16 @@ const structuredData = {
     },
     {
       "@type": "Person",
-      "@id": \`\${siteUrl}/#diane-salman\`,
+      "@id": `${siteUrl}/#diane-salman`,
       name: "Diane Salman, MBA",
       jobTitle: "Founder, Speaker, Consultant and Trauma Recovery Educator",
-      worksFor: { "@id": \`\${siteUrl}/#organization\` },
+      worksFor: { "@id": `${siteUrl}/#organization` },
     },
     {
       "@type": "Service",
-      "@id": \`\${pageUrl}/#service\`,
+      "@id": `${pageUrl}/#service`,
       name: "Organizational Resilience Consulting",
-      provider: { "@id": \`\${siteUrl}/#organization\` },
+      provider: { "@id": `${siteUrl}/#organization` },
       url: pageUrl,
       description:
         "Consulting, speaking, leadership training, group coaching, organizational assessment, and resilience support for organizations navigating pressure, disruption, and workforce transformation.",
