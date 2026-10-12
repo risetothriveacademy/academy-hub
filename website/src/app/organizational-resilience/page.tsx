@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import OrganizationalResilienceForm from "@/components/OrganizationalResilienceForm";
 
 const siteUrl = "https://risetothrive-hub.com";
 const pageUrl = `${siteUrl}/organizational-resilience`;
@@ -591,104 +592,7 @@ export default function OrganizationalResiliencePage() {
           title="Tell Us What Your Organization Is Navigating"
           text="Every organization is different. Tell us where you are experiencing the greatest pressure. If you are unsure where the problem sits, select the option asking us to help identify the right starting point."
         />
-        <form
-          name="organizational-resilience-inquiry"
-          method="POST"
-          action="/organizational-resilience/thank-you"
-          data-netlify="true"
-          data-netlify-honeypot="bot-field"
-          className="mx-auto max-w-5xl space-y-10 rounded-3xl bg-white p-6 shadow-sm sm:p-10"
-        >
-          <input type="hidden" name="form-name" value="organizational-resilience-inquiry" />
-          <input type="hidden" name="lead_source" value="/organizational-resilience" />
-          <p className="hidden">
-            <label>
-              Don’t fill this out: <input name="bot-field" />
-            </label>
-          </p>
-
-          <div className="grid gap-5 sm:grid-cols-2">
-            {[
-              ["Name", "name", "text", true],
-              ["Organization", "organization", "text", true],
-              ["Role / Title", "role", "text", true],
-              ["Work Email", "email", "email", true],
-              ["Phone (optional)", "phone", "tel", false],
-            ].map(([label, name, type, required]) => (
-              <label key={String(name)} className="block">
-                <span className="mb-2 block text-sm font-semibold text-slate-800">{label}</span>
-                <input
-                  type={String(type)}
-                  name={String(name)}
-                  required={Boolean(required)}
-                  className="w-full rounded-xl border border-slate-300 px-4 py-3 outline-none transition focus:border-[#D4A017]"
-                />
-              </label>
-            ))}
-            <label className="block">
-              <span className="mb-2 block text-sm font-semibold text-slate-800">Organization Size</span>
-              <select
-                name="organization_size"
-                className="w-full rounded-xl border border-slate-300 bg-white px-4 py-3 outline-none transition focus:border-[#D4A017]"
-              >
-                <option value="">Select</option>
-                <option>1–10</option>
-                <option>11–50</option>
-                <option>51–200</option>
-                <option>201–500</option>
-                <option>501–1,000</option>
-                <option>1,001–5,000</option>
-                <option>5,000+</option>
-              </select>
-            </label>
-          </div>
-
-          <CheckboxGroup
-            legend="What is your organization currently navigating? Select all that apply."
-            name="current_challenges"
-            items={navigatingOptions}
-          />
-
-          <CheckboxGroup
-            legend="What would you most like to improve? Select all that apply."
-            name="desired_improvements"
-            items={improvementOptions}
-          />
-
-          <label className="block">
-            <span className="mb-2 block text-lg font-semibold text-slate-900">
-              Briefly tell us what is happening
-            </span>
-            <span className="mb-3 block text-sm text-slate-600">
-              What are you seeing in your organization that prompted you to reach out?
-            </span>
-            <textarea
-              name="context"
-              rows={6}
-              className="w-full rounded-xl border border-slate-300 px-4 py-3 outline-none transition focus:border-[#D4A017]"
-            />
-          </label>
-
-          <CheckboxGroup
-            legend="What type of support are you considering? Select all that apply."
-            name="support_type"
-            items={supportOptions}
-          />
-
-          <div className="rounded-2xl bg-slate-50 p-5 text-sm leading-6 text-slate-600">
-            Rise to Thrive Hub provides education, organizational consulting,
-            resilience training, and coaching. Services do not replace psychotherapy,
-            diagnosis, medical treatment, emergency services, or an employer’s HR,
-            legal, or clinical responsibilities.
-          </div>
-
-          <button
-            type="submit"
-            className="w-full rounded-full bg-[#D4A017] px-7 py-4 text-lg font-bold text-[#202833] shadow-lg transition hover:brightness-110"
-          >
-            Schedule an Organizational Resilience Conversation
-          </button>
-        </form>
+        <OrganizationalResilienceForm />
       </section>
 
       <section className="mx-auto max-w-7xl px-6 py-20 lg:px-8">
