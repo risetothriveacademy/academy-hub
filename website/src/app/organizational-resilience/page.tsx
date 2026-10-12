@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import OrganizationalResilienceForm from "@/components/OrganizationalResilienceForm";
+import SpecialtyClusterTabs from "@/components/SpecialtyClusterTabs";
 
 const siteUrl = "https://risetothrive-hub.com";
 const pageUrl = `${siteUrl}/organizational-resilience`;
@@ -211,17 +212,17 @@ function SectionTitle({
   text?: string;
 }) {
   return (
-    <div className="mx-auto mb-10 max-w-3xl text-center">
+    <div className="mx-auto mb-10 max-w-4xl text-center">
       {eyebrow ? (
-        <p className="mb-3 text-sm font-semibold uppercase tracking-[0.2em] text-[#D4A017]">
+        <p className="mb-3 text-base font-bold uppercase tracking-[0.22em] text-[#DB910F]">
           {eyebrow}
         </p>
       ) : null}
-      <h2 className="text-3xl font-bold tracking-tight text-slate-900 sm:text-4xl">
+      <h2 className="text-4xl font-bold tracking-tight text-[#0097B2] sm:text-5xl">
         {title}
       </h2>
       {text ? (
-        <p className="mt-4 text-lg leading-8 text-slate-600">{text}</p>
+        <p className="mt-5 text-lg leading-8 text-slate-600">{text}</p>
       ) : null}
     </div>
   );
@@ -232,7 +233,7 @@ function CheckList({ items }: { items: string[] }) {
     <ul className="space-y-3">
       {items.map((item) => (
         <li key={item} className="flex gap-3 text-slate-700">
-          <span className="mt-1.5 h-2.5 w-2.5 shrink-0 rounded-full bg-[#D4A017]" />
+          <span className="mt-1.5 h-2.5 w-2.5 shrink-0 rounded-full bg-[#DB910F]" />
           <span>{item}</span>
         </li>
       ))}
@@ -256,13 +257,13 @@ function CheckboxGroup({
         {items.map((item) => (
           <label
             key={item}
-            className="flex cursor-pointer items-start gap-3 rounded-xl border border-slate-200 bg-white p-3 transition hover:border-[#D4A017]"
+            className="flex cursor-pointer items-start gap-3 rounded-xl border border-slate-200 bg-white p-3 transition hover:border-[#DB910F]"
           >
             <input
               type="checkbox"
               name={name}
               value={item}
-              className="mt-1 h-4 w-4 rounded border-slate-300 accent-[#D4A017]"
+              className="mt-1 h-4 w-4 rounded border-slate-300 accent-[#DB910F]"
             />
             <span className="text-sm leading-6 text-slate-700">{item}</span>
           </label>
@@ -281,39 +282,39 @@ export default function OrganizationalResiliencePage() {
       />
 
       <section className="relative overflow-hidden bg-[#202833] text-white">
-        <div className="absolute inset-0 bg-[radial-gradient(circle_at_top_right,rgba(212,160,23,0.18),transparent_36%)]" />
-        <div className="relative mx-auto max-w-7xl px-6 py-24 lg:px-8 lg:py-32">
-          <div className="max-w-5xl">
-            <p className="mb-5 text-sm font-semibold uppercase tracking-[0.24em] text-[#E7C45B]">
+        <div className="absolute inset-0 bg-[radial-gradient(circle_at_top_right,rgba(219,145,15,0.16),transparent_36%)]" />
+        <div className="relative mx-auto max-w-7xl px-6 py-16 lg:px-8 lg:py-20">
+          <div className="max-w-6xl">
+            <p className="mb-6 text-base font-bold uppercase tracking-[0.24em] text-[#DB910F] sm:text-lg">
               Organizational Resilience • Human Capacity • Workforce Transformation
             </p>
-            <h1 className="max-w-5xl text-4xl font-bold tracking-tight sm:text-6xl">
-              Protect the Person. Build Resilience. Strengthen Performance,
-              Productivity and Profitability.™
+
+            <h1 className="max-w-6xl space-y-1 text-4xl font-bold tracking-tight sm:text-6xl">
+              <span className="block text-white">Protect the Person.</span>
+              <span className="block text-[#0097B2]">Build Resilience.</span>
+              <span className="block text-[#DB910F]">
+                Strengthen Performance, Productivity and Profitability.™
+              </span>
             </h1>
-            <p className="mt-6 text-xl font-medium text-[#F1D77B]">
-              Human Capacity → Resilience → Performance → Productivity →
-              Profitability
+
+            <p className="mt-7 text-xl font-semibold text-white sm:text-2xl">
+              Human Capacity → Resilience → Performance → Productivity → Profitability
             </p>
-            <p className="mt-7 max-w-3xl text-lg leading-8 text-slate-200">
-              Rise to Thrive Hub helps leaders and organizations strengthen human
-              capacity through pressure, disruption, AI adoption, restructuring,
-              workforce transformation, and change — so people can adapt, recover,
-              remain engaged, and continue performing.
-            </p>
-            <p className="mt-6 text-2xl font-semibold text-white">
+
+            <p className="mt-7 max-w-4xl text-2xl font-bold leading-9 text-[#0097B2] sm:text-3xl">
               Technology may transform the role. Leadership must protect the person.
             </p>
-            <div className="mt-10 flex flex-wrap gap-4">
+
+            <div className="mt-9 flex flex-wrap gap-4">
               <a
                 href="#inquiry"
-                className="rounded-full bg-[#D4A017] px-6 py-3.5 font-semibold text-[#202833] shadow-lg transition hover:brightness-110"
+                className="rounded-full bg-[#DB910F] px-7 py-4 font-bold text-[#202833] shadow-lg transition hover:brightness-110"
               >
                 Schedule an Organizational Resilience Conversation
               </a>
               <a
                 href="#speaking"
-                className="rounded-full border border-white/40 px-6 py-3.5 font-semibold text-white transition hover:border-[#D4A017] hover:text-[#F1D77B]"
+                className="rounded-full border border-white/40 px-7 py-4 font-bold text-white transition hover:border-[#0097B2] hover:text-[#0097B2]"
               >
                 Book Diane to Speak
               </a>
@@ -322,29 +323,62 @@ export default function OrganizationalResiliencePage() {
         </div>
       </section>
 
-      <section className="mx-auto max-w-7xl px-6 py-20 lg:px-8">
-        <SectionTitle
-          eyebrow="The Business Problem"
-          title="The Pressure You See Is Not Always the Whole Problem"
-          text="Organizations often notice the performance change first. The individual may be living the battle underneath it."
-        />
-        <div className="grid gap-8 lg:grid-cols-2">
-          <div className="rounded-3xl bg-slate-50 p-8">
-            <h3 className="mb-5 text-xl font-bold">What the organization may see</h3>
-            <CheckList items={primaryIssues} />
+      <section className="bg-white px-6 py-16 lg:px-8">
+        <div className="mx-auto max-w-7xl">
+          <SectionTitle
+            eyebrow="The Opportunity"
+            title="Close the Gap Between the Organization You Need and the Pressure Your People Carry"
+            text="A strong organization depends on human capacity. When pressure, disruption, grief, trauma, uncertainty, or workforce change weaken that capacity, the business eventually feels the cost."
+          />
+
+          <div className="grid gap-6 lg:grid-cols-3">
+            <article className="rounded-3xl border border-slate-200 bg-slate-50 p-7">
+              <p className="text-sm font-bold uppercase tracking-[0.18em] text-[#DB910F]">The Ideal Organization</p>
+              <h3 className="mt-3 text-2xl font-bold text-[#0097B2]">Built to Perform</h3>
+              <CheckList items={["Clear vision","Healthy leadership capacity","Engaged teams","Consistent execution","Sustainable growth"]} />
+            </article>
+
+            <article className="rounded-3xl border border-slate-200 bg-slate-50 p-7">
+              <p className="text-sm font-bold uppercase tracking-[0.18em] text-[#DB910F]">The Ideal Human Asset</p>
+              <h3 className="mt-3 text-2xl font-bold text-[#0097B2]">Ready to Contribute</h3>
+              <CheckList items={["Focused","Supported","Adaptable","Resilient","Able to perform under pressure"]} />
+            </article>
+
+            <article className="rounded-3xl border border-[#DB910F]/30 bg-[#FFF8E8] p-7">
+              <p className="text-sm font-bold uppercase tracking-[0.18em] text-[#B25B00]">The Reality Under Pressure</p>
+              <h3 className="mt-3 text-2xl font-bold text-slate-900">The Gap Appears</h3>
+              <CheckList items={["Burnout and disengagement","AI / restructuring uncertainty","Grief, trauma and adversity","Reduced focus and confidence","Turnover and productivity risk"]} />
+            </article>
           </div>
-          <div className="rounded-3xl border border-[#D4A017]/30 bg-[#FFF9E8] p-8">
-            <h3 className="mb-5 text-xl font-bold">What may be happening underneath</h3>
-            <CheckList items={hiddenDrivers} />
+
+          <div className="mx-auto mt-8 max-w-5xl rounded-3xl bg-[#202833] p-8 text-center text-white">
+            <p className="text-sm font-bold uppercase tracking-[0.2em] text-[#DB910F]">Close the Gap</p>
+            <p className="mt-4 text-2xl font-bold leading-9 sm:text-3xl">
+              <span className="text-white">Protect the Person.</span>{" "}
+              <span className="text-[#0097B2]">Build Resilience.</span>{" "}
+              <span className="text-[#DB910F]">Strengthen Performance, Productivity and Profitability.™</span>
+            </p>
+            <p className="mx-auto mt-5 max-w-4xl leading-7 text-slate-300">
+              A proactive resilience strategy can help reduce the long-term costs of unsupported transition — including preventable turnover, rehiring, retraining, absenteeism, productivity loss, and the erosion of institutional knowledge.
+            </p>
           </div>
         </div>
-        <blockquote className="mx-auto mt-12 max-w-4xl border-l-4 border-[#D4A017] pl-6 text-2xl font-semibold leading-10 text-slate-800">
-          The organization sees the performance change. The individual is living
-          the battle underneath it.
-        </blockquote>
       </section>
 
-      <section className="bg-slate-50 px-6 py-20">
+      <section id="business-philosophy" className="border-y border-slate-200 bg-slate-50 px-6 py-12">
+        <div className="mx-auto max-w-6xl text-center">
+          <p className="text-base font-bold uppercase tracking-[0.2em] text-[#DB910F]">Business Philosophy</p>
+          <h2 className="mt-3 text-3xl font-bold text-[#0097B2] sm:text-4xl">Human Capacity Is a Business Asset</h2>
+          <p className="mx-auto mt-4 max-w-4xl text-lg leading-8 text-slate-600">
+            Organizations protect financial assets, intellectual property, systems, infrastructure, and data. Every one of them depends on human capacity.
+          </p>
+          <p className="mt-6 text-2xl font-bold text-[#202833] sm:text-3xl">
+            Human Capacity → Resilience → Performance → Productivity → Profitability
+          </p>
+        </div>
+      </section>
+
+      <section id="workforce-transformation" className="bg-white px-6 py-20">
         <SectionTitle
           eyebrow="Workforce Transformation"
           title="Every Major Organizational Change Creates Three Transitions"
@@ -368,63 +402,81 @@ export default function OrganizationalResiliencePage() {
               text: "Who am I if the role I spent 10, 15, or 20 years mastering is no longer valued in the same way?",
             },
           ].map((item) => (
-            <article key={item.n} className="rounded-3xl bg-white p-8 shadow-sm">
-              <span className="text-sm font-bold text-[#D4A017]">{item.n}</span>
-              <h3 className="mt-3 text-2xl font-bold">{item.title}</h3>
+            <article key={item.n} className="rounded-3xl border border-slate-200 bg-slate-50 p-8">
+              <span className="text-sm font-bold text-[#DB910F]">{item.n}</span>
+              <h3 className="mt-3 text-2xl font-bold text-[#0097B2]">{item.title}</h3>
               <p className="mt-4 leading-7 text-slate-600">{item.text}</p>
             </article>
           ))}
         </div>
       </section>
 
-      <section className="mx-auto max-w-7xl px-6 py-20 lg:px-8">
-        <div className="grid gap-10 lg:grid-cols-2">
-          <article className="rounded-3xl bg-[#202833] p-9 text-white">
-            <p className="text-sm font-semibold uppercase tracking-[0.2em] text-[#E7C45B]">
-              Proprietary Teaching
-            </p>
-            <h2 className="mt-3 text-3xl font-bold">The Unseen Battle™</h2>
-            <p className="mt-5 leading-8 text-slate-200">
-              Burnout, disengagement, or declining performance may be the visible
-              symptom. The deeper question is: what is happening underneath?
-            </p>
-            <p className="mt-6 text-xl font-semibold">
-              The first question should not always be “How do we make this person
-              perform again?”
-            </p>
-            <p className="mt-3 text-xl font-semibold text-[#F1D77B]">
-              Sometimes the better question is “What is happening underneath?”
-            </p>
-          </article>
-          <article className="rounded-3xl border border-[#D4A017]/30 bg-[#FFF9E8] p-9">
-            <p className="text-sm font-semibold uppercase tracking-[0.2em] text-[#9A6A00]">
-              Proprietary Teaching
-            </p>
-            <h2 className="mt-3 text-3xl font-bold">The Inner Voice™</h2>
-            <p className="mt-5 leading-8 text-slate-700">
-              During disruption, people may privately ask: Am I still valuable? Can
-              I learn this? Am I becoming obsolete? What happens if I lose this role?
-            </p>
-            <p className="mt-6 text-xl font-semibold text-slate-900">
-              Those are not technology questions. They are human questions.
-            </p>
-          </article>
+      <section id="business-problem" className="bg-slate-50 px-6 py-20">
+        <SectionTitle
+          eyebrow="The Business Problem"
+          title="The Pressure You See Is Not Always the Whole Problem"
+          text="Organizations often notice the performance change first. The individual may be living the battle underneath it."
+        />
+
+        <div className="mx-auto grid max-w-7xl gap-8 lg:grid-cols-2">
+          <div className="rounded-3xl bg-white p-8">
+            <h3 className="mb-5 text-2xl font-bold text-[#0097B2]">What the organization may see</h3>
+            <CheckList items={primaryIssues} />
+          </div>
+          <div className="rounded-3xl border border-[#DB910F]/30 bg-[#FFF8E8] p-8">
+            <h3 className="mb-5 text-2xl font-bold text-[#B25B00]">What may be happening underneath</h3>
+            <CheckList items={hiddenDrivers} />
+          </div>
+        </div>
+
+        <blockquote className="mx-auto mt-10 max-w-4xl border-l-4 border-[#DB910F] pl-6 text-2xl font-semibold leading-10 text-slate-800">
+          The organization sees the performance change. The individual is living the battle underneath it.
+        </blockquote>
+
+        <div className="mx-auto mt-14 max-w-7xl">
+          <p className="mb-6 text-center text-base font-bold uppercase tracking-[0.2em] text-[#DB910F]">
+            Proprietary Teachings
+          </p>
+          <div className="grid gap-8 lg:grid-cols-2">
+            <article className="rounded-3xl bg-[#202833] p-9 text-white">
+              <h3 className="text-3xl font-bold text-[#0097B2]">The Unseen Battle™</h3>
+              <p className="mt-5 leading-8 text-slate-200">
+                Burnout, disengagement, or declining performance may be the visible symptom. The deeper question is: what is happening underneath?
+              </p>
+              <p className="mt-6 text-xl font-semibold">
+                The first question should not always be “How do we make this person perform again?”
+              </p>
+              <p className="mt-3 text-xl font-semibold text-[#DB910F]">
+                Sometimes the better question is “What is happening underneath?”
+              </p>
+            </article>
+
+            <article className="rounded-3xl border border-[#DB910F]/30 bg-white p-9">
+              <h3 className="text-3xl font-bold text-[#0097B2]">The Inner Voice™</h3>
+              <p className="mt-5 leading-8 text-slate-700">
+                During disruption, people may privately ask: Am I still valuable? Can I learn this? Am I becoming obsolete? What happens if I lose this role?
+              </p>
+              <p className="mt-6 text-xl font-semibold text-slate-900">
+                Those are not technology questions. They are human questions.
+              </p>
+            </article>
+          </div>
         </div>
       </section>
 
-      <section className="bg-[#202833] px-6 py-20 text-white">
-        <div className="mx-auto mb-10 max-w-3xl text-center">
-          <p className="mb-3 text-sm font-semibold uppercase tracking-[0.2em] text-[#E7C45B]">
+      <section id="structured-approach" className="bg-[#202833] px-6 py-20 text-white">
+        <div className="mx-auto mb-10 max-w-4xl text-center">
+          <p className="mb-3 text-base font-bold uppercase tracking-[0.2em] text-[#DB910F]">
             A Structured Approach
           </p>
-          <h2 className="text-3xl font-bold tracking-tight text-white sm:text-4xl">
+          <h2 className="text-4xl font-bold tracking-tight text-[#0097B2] sm:text-5xl">
             Five Steps for Human Resilience Through Change
           </h2>
-          <p className="mt-4 text-lg leading-8 text-slate-300">
-            A practical structure informed by lived experience, trauma-recovery
-            education, and organizational application.
+          <p className="mt-5 text-lg leading-8 text-slate-300">
+            A practical structure informed by lived experience, trauma-recovery education, and organizational application.
           </p>
         </div>
+
         <div className="mx-auto grid max-w-7xl gap-5 md:grid-cols-5">
           {[
             ["D", "Detect the Unseen Battle™", "Recognize what may be happening beneath the visible performance problem."],
@@ -434,7 +486,7 @@ export default function OrganizationalResiliencePage() {
             ["E", "Equip for Sustainable Resilience", "Build the capacity to adapt, learn, recover, remain effective, and continue contributing through ongoing change."],
           ].map(([letter, title, text]) => (
             <article key={letter} className="rounded-2xl border border-white/10 bg-white/5 p-6">
-              <div className="mb-4 flex h-11 w-11 items-center justify-center rounded-full bg-[#D4A017] text-lg font-bold text-[#202833]">
+              <div className="mb-4 flex h-11 w-11 items-center justify-center rounded-full bg-[#DB910F] text-lg font-bold text-[#202833]">
                 {letter}
               </div>
               <h3 className="font-bold text-white">{title}</h3>
@@ -444,12 +496,22 @@ export default function OrganizationalResiliencePage() {
         </div>
       </section>
 
-      <section className="mx-auto max-w-7xl px-6 py-20 lg:px-8">
+      <section id="consultancy-model" className="bg-white px-6 py-20">
         <SectionTitle
           eyebrow="Consultancy Model"
           title="From Awareness to Measurable Organizational Action"
         />
-        <div className="grid gap-6 md:grid-cols-2 xl:grid-cols-4">
+
+        <div className="mx-auto mb-10 flex max-w-4xl flex-wrap justify-center gap-3">
+          <a href="#economic-case" className="rounded-full border border-[#DB910F] bg-[#FFF8E8] px-5 py-2 text-sm font-bold text-[#B25B00]">
+            The Economic Case
+          </a>
+          <a href="#business-philosophy" className="rounded-full border border-[#0097B2] bg-slate-50 px-5 py-2 text-sm font-bold text-[#0097B2]">
+            Business Philosophy
+          </a>
+        </div>
+
+        <div className="mx-auto grid max-w-7xl gap-6 md:grid-cols-2 xl:grid-cols-4">
           {[
             ["1", "Diagnostic / Baseline", "Leadership interviews, anonymous pulse surveys, risk mapping, role-transition and resilience assessment, and priority reporting."],
             ["2", "Implementation", "Keynotes, workshops, leadership training, manager education, group coaching, team resilience programs, and transition support."],
@@ -457,57 +519,34 @@ export default function OrganizationalResiliencePage() {
             ["4", "Executive Review", "Clear reporting on what changed, where risk increased, what requires intervention, what is improving, and recommended next steps."],
           ].map(([n, title, text]) => (
             <article key={n} className="rounded-3xl border border-slate-200 p-7">
-              <span className="text-sm font-bold text-[#D4A017]">STAGE {n}</span>
-              <h3 className="mt-3 text-xl font-bold">{title}</h3>
+              <span className="text-sm font-bold text-[#DB910F]">STAGE {n}</span>
+              <h3 className="mt-3 text-xl font-bold text-[#0097B2]">{title}</h3>
               <p className="mt-4 leading-7 text-slate-600">{text}</p>
             </article>
           ))}
         </div>
-      </section>
 
-      <section className="bg-slate-50 px-6 py-20">
-        <div className="mx-auto grid max-w-7xl gap-10 lg:grid-cols-2 lg:items-center">
+        <div id="economic-case" className="mx-auto mt-14 grid max-w-7xl gap-10 rounded-3xl bg-slate-50 p-8 lg:grid-cols-2 lg:items-center sm:p-10">
           <div>
-            <p className="text-sm font-semibold uppercase tracking-[0.2em] text-[#9A6A00]">
-              The Economic Case
-            </p>
-            <h2 className="mt-3 text-3xl font-bold sm:text-4xl">
-              The Cost of Unsupported Transition
-            </h2>
+            <p className="text-base font-bold uppercase tracking-[0.2em] text-[#DB910F]">The Economic Case</p>
+            <h3 className="mt-3 text-3xl font-bold text-[#0097B2] sm:text-4xl">The Cost of Unsupported Transition</h3>
             <p className="mt-5 text-lg leading-8 text-slate-600">
-              The better question is not only “What does resilience support cost?”
-              It is “What does unsupported transition cost if we wait until a person
-              is disengaged, absent, leaves, or must be replaced?”
+              The better question is not only “What does resilience support cost?” It is “What does unsupported transition cost if we wait until a person is disengaged, absent, leaves, or must be replaced?”
             </p>
           </div>
           <div className="rounded-3xl bg-white p-8 shadow-sm">
-            <h3 className="text-lg font-bold">Estimated program value can include:</h3>
-            <p className="mt-5 rounded-2xl bg-[#FFF9E8] p-5 font-semibold leading-8 text-slate-800">
-              Avoided replacement cost + reduced absence + reduced productivity loss
-              + improved retention + retained institutional knowledge − program cost
+            <h4 className="text-lg font-bold">Estimated program value can include:</h4>
+            <p className="mt-5 rounded-2xl bg-[#FFF8E8] p-5 font-semibold leading-8 text-slate-800">
+              Avoided replacement cost + reduced absence + reduced productivity loss + improved retention + retained institutional knowledge − program cost
             </p>
             <p className="mt-5 text-sm leading-6 text-slate-500">
-              Any ROI estimate should be based on the organization’s own data and
-              agreed assumptions; results are not guaranteed.
+              Any ROI estimate should be based on the organization’s own data and agreed assumptions; results are not guaranteed.
             </p>
           </div>
         </div>
       </section>
 
-      <section className="mx-auto max-w-7xl px-6 py-20 lg:px-8">
-        <SectionTitle
-          eyebrow="Business Philosophy"
-          title="Human Capacity Is a Business Asset"
-          text="Organizations protect financial assets, intellectual property, systems, infrastructure, and data. Every one of them depends on human capacity."
-        />
-        <div className="mx-auto max-w-5xl rounded-3xl bg-[#202833] p-8 text-center text-white sm:p-12">
-          <p className="text-2xl font-bold text-[#F1D77B] sm:text-3xl">
-            Human Capacity → Resilience → Performance → Productivity → Profitability
-          </p>
-        </div>
-      </section>
-
-      <section className="bg-slate-50 px-6 py-20">
+      <section id="who-we-help" className="bg-slate-50 px-6 py-20">
         <SectionTitle
           eyebrow="Who We Help"
           title="Designed for Leaders and Organizations Navigating Change"
@@ -530,28 +569,19 @@ export default function OrganizationalResiliencePage() {
         </div>
       </section>
 
-      <section className="mx-auto max-w-7xl px-6 py-20 lg:px-8">
+      <section id="how-we-assist" className="bg-white px-6 py-20">
         <SectionTitle
-          eyebrow="Specialty Areas"
-          title="Integrated Support Across the Human Side of Performance"
-          text="We do not exclude any of these specialties. They are grouped into broader strategic solutions so organizations receive connected support rather than isolated interventions."
+          eyebrow="How We Can Assist"
+          title="Workforce Transformation Support Built Around the Human Side of Performance"
+          text="The specialties are organized into six strategic solution clusters. Use the tabs to explore how the work connects; these same clusters can become the consultancy sub-pages."
         />
-        <div className="flex flex-wrap justify-center gap-3">
-          {specialties.map((item) => (
-            <span
-              key={item}
-              className="rounded-full border border-slate-200 bg-white px-4 py-2 text-sm font-medium text-slate-700 shadow-sm"
-            >
-              {item}
-            </span>
-          ))}
-        </div>
+        <SpecialtyClusterTabs />
       </section>
 
       <section id="speaking" className="bg-[#202833] px-6 py-20 text-white">
         <div className="mx-auto grid max-w-6xl gap-10 lg:grid-cols-2 lg:items-center">
           <div>
-            <p className="text-sm font-semibold uppercase tracking-[0.2em] text-[#E7C45B]">
+            <p className="text-sm font-semibold uppercase tracking-[0.2em] text-[#DB910F]">
               Speaking & Leadership Experiences
             </p>
             <h2 className="mt-3 text-3xl font-bold sm:text-4xl">
@@ -577,7 +607,7 @@ export default function OrganizationalResiliencePage() {
                 "Leadership restoration and retreat experiences",
               ].map((item) => (
                 <li key={item} className="flex gap-3">
-                  <span className="mt-1.5 h-2.5 w-2.5 shrink-0 rounded-full bg-[#D4A017]" />
+                  <span className="mt-1.5 h-2.5 w-2.5 shrink-0 rounded-full bg-[#DB910F]" />
                   <span>{item}</span>
                 </li>
               ))}
@@ -609,26 +639,7 @@ export default function OrganizationalResiliencePage() {
         </div>
       </section>
 
-      <section className="bg-[#202833] px-6 py-20 text-center text-white">
-        <div className="mx-auto max-w-4xl">
-          <h2 className="text-3xl font-bold sm:text-4xl">
-            Prepare People Before Transition Becomes Crisis
-          </h2>
-          <p className="mt-5 text-lg leading-8 text-slate-200">
-            Protect the human capacity upon which your vision depends.
-          </p>
-          <p className="mt-6 text-2xl font-bold text-[#F1D77B]">
-            Protect the Person. Build Resilience. Strengthen Performance,
-            Productivity and Profitability.™
-          </p>
-          <a
-            href="#inquiry"
-            className="mt-9 inline-block rounded-full bg-[#D4A017] px-7 py-4 font-bold text-[#202833]"
-          >
-            Start the Conversation
-          </a>
-        </div>
-      </section>
+
     </main>
   );
 }
