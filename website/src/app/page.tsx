@@ -262,7 +262,7 @@ export default function Home() {
               <div className="mt-6 flex items-center justify-between">
                 <span className="text-2xl font-bold text-[#0097B2]">$99</span>
                 <Link
-                href="https://academy-hub-masterfile.netlify.app/disclosures/universal-legal-disclosures"
+                href="/disclosures/universal-legal-disclosures"
                 className="inline-flex items-center gap-2 px-6 py-3 rounded-lg font-bold text-white transition-all hover:shadow-lg"
                 style={{
                 background: `linear-gradient(135deg, ${BRAND.teal}, ${BRAND.gold})`
