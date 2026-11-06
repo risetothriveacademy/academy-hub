@@ -51,7 +51,7 @@ function ThankYouContent() {
           </div>
         </div>
         <div className="mt-8 flex items-center gap-3">
-          <Link href="/portal" className="inline-flex items-center rounded-2xl bg-[#0097B2] px-6 py-3 font-semibold text-white">Go to Portal</Link>
+          <Link href="/login" className="inline-flex items-center rounded-2xl bg-[#0097B2] px-6 py-3 font-semibold text-white">Go to My Courses</Link>
           <Link href="/" className="inline-flex items-center rounded-2xl border border-gray-300 px-6 py-3 font-semibold">Return to Home</Link>
         </div>
         <p className="mt-4 text-xs opacity-70">If you didn't receive your access email, contact support.</p>

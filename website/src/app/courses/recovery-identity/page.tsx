@@ -1,9 +1,10 @@
 import Link from "next/link";
+import { EnrollCard, FoundationOfferLink } from "@/components/EnrollCard";
 import { brand } from "@/lib/brand";
 
 // IMPORTANT: env var uses underscores, not hyphens
 // Example: recovery-identity → NEXT_PUBLIC_STRIPE_URL_recovery_identity
-const CHECKOUT_URL = process.env.NEXT_PUBLIC_STRIPE_URL_recovery_identity || "#";
+const CHECKOUT_URL = process.env.NEXT_PUBLIC_STRIPE_URL_recovery_identity;
 
 export const metadata = {
   title: "Identity & Self-Worth — Recovery Series",
@@ -38,20 +39,15 @@ export default function Page() {
           </div>
         </div>
         <div className="space-y-6">
-          <div className="rounded-2xl border border-gray-200 bg-white p-6 shadow-sm">
-            <h2 className="text-lg font-bold">Enroll</h2>
-            <p className="mt-2 text-sm text-gray-700">Instant access after purchase. Your receipt and access email will arrive within minutes.</p>
-            <div className="mt-4">
-              <Link href={CHECKOUT_URL} className="inline-flex w-full items-center justify-center rounded-xl bg-[#0EA5E9] px-5 py-2 text-sm font-semibold text-white hover:bg-[#0284C7]">
-                Enroll Now
-              </Link>
-            </div>
-            <p className="mt-2 text-xs text-gray-500">Secure checkout via Stripe.</p>
-          </div>
+          <EnrollCard
+            courseTitle="Identity & Self-Worth (Recovery Series)"
+            checkoutUrl={CHECKOUT_URL}
+            buttonClassName="bg-[#0EA5E9] hover:bg-[#0284C7]"
+          />
           <div className="rounded-2xl border border-gray-200 bg-white p-6 shadow-sm">
             <h2 className="text-lg font-bold">Continue Your Healing</h2>
             <ul className="mt-2 text-sm text-gray-700 list-disc pl-5 space-y-1">
-              <li><Link href="/foundation/start" className="underline">Start the 5‑Day Foundation</Link></li>
+              <li><FoundationOfferLink className="underline" /></li>
               <li><Link href="/mastermind" className="underline">Explore the Mastermind</Link></li>
               <li><Link href="/courses/transformational-course" className="underline">All programs</Link></li>
             </ul>

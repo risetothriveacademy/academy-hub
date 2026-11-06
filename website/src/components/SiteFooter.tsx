@@ -1,4 +1,5 @@
 import Link from "next/link";
+import { FOUNDATION_OFFER_URL, SUPPORT_EMAIL } from "@/lib/academy-links";
 
 export default function SiteFooter() {
   return (
@@ -14,9 +15,11 @@ export default function SiteFooter() {
           <div>
             <h4 className="font-semibold text-slate-200">Programs</h4>
             <ul className="mt-2 space-y-2 text-sm text-slate-400">
-              <li><Link href="https://foundation.risetothrive-academy.com/offer-video-a" className="hover:text-[#0097B2] transition-colors">Foundation Course</Link></li>
+              <li><a href={FOUNDATION_OFFER_URL} target="_blank" rel="noopener noreferrer" className="hover:text-[#0097B2] transition-colors">Foundation Course</a></li>
               <li><Link href="/minicourses" className="hover:text-[#0097B2] transition-colors">Emotional Recovery</Link></li>
               <li><Link href="/courses/transformational-course" className="hover:text-[#0097B2] transition-colors">Recovery Series</Link></li>
+              <li><Link href="/mastermind" className="hover:text-[#0097B2] transition-colors">Mastermind</Link></li>
+              <li><Link href="/advanced-mastery" className="hover:text-[#0097B2] transition-colors">Advanced Mastery</Link></li>
             </ul>
           </div>
           <div>
@@ -30,24 +33,10 @@ export default function SiteFooter() {
           <div>
             <h4 className="font-semibold text-slate-200">Legal</h4>
 <ul className="mt-2 space-y-2 text-sm text-slate-400">
-
-<li>
-<Link href="/disclosures/universal-legal-disclosures" className="hover:text-[#0097B2] transition-colors">
-Universal Legal Disclosures
-</Link>
-</li>
-
-<li>
-<Link href="/disclosures/universal-legal-disclosures" className="hover:text-[#0097B2] transition-colors">
-Privacy Policy
-</Link>
-</li>
-
-<li>
-<Link href="/disclosures/universal-legal-disclosures" className="hover:text-[#0097B2] transition-colors">
-Terms of Service
-</Link>
-</li>
+              <li><Link href="/disclosures/universal-legal-disclosures" className="hover:text-[#0097B2] transition-colors">Universal Legal Disclosures</Link></li>
+              <li><Link href="/disclosures/privacy" className="hover:text-[#0097B2] transition-colors">Privacy Policy</Link></li>
+              <li><Link href="/disclosures/terms" className="hover:text-[#0097B2] transition-colors">Terms of Service</Link></li>
+              <li><Link href="/disclosures/refund-policy" className="hover:text-[#0097B2] transition-colors">Refund Policy</Link></li>
             </ul>
           </div>
         </div>
@@ -58,11 +47,17 @@ Terms of Service
             <p className="text-sm text-slate-400">
               For support inquiries, contact us at{" "}
               <a
-                href="mailto:support@risetothrive-academy.com"
+                href={`mailto:${SUPPORT_EMAIL}`}
                 className="text-[#0097B2] hover:text-[#00c5e5] transition-colors"
               >
-                support@risetothrive-academy.com
+                {SUPPORT_EMAIL}
               </a>
+            </p>
+            <p className="mt-3 text-xs text-slate-500 max-w-2xl mx-auto">
+              Rise to Thrive Academy provides faith-based education. It is not therapy, counseling,
+              medical care or a crisis service. If you are in crisis in the U.S., call or text{" "}
+              <a href="tel:988" className="text-[#0097B2] hover:text-[#00c5e5]">988</a> (Suicide &amp; Crisis
+              Lifeline) or call 911 in an emergency.
             </p>
           </div>
         </div>

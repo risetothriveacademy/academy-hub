@@ -1,4 +1,5 @@
 import Link from "next/link";
+import { FOUNDATION_OFFER_URL, FOUNDATION_PRICE_LABEL } from "@/lib/academy-links";
 
 export const metadata = {
   title: "Articles & Resources — Rise to Thrive Academy",
@@ -112,15 +113,19 @@ export default function BlogsPage() {
                     <span className="text-xs text-gray-500 italic">
                       {post.comingSoon ? 'Coming Soon' : 'Published'}
                     </span>
-                    <Link
-                      href={post.comingSoon ? '#' : `/blogs/${post.slug}`}
-                      className="inline-flex items-center gap-1 text-[#0097B2] text-sm font-semibold hover:gap-2 transition-all"
-                    >
+                    {post.comingSoon ? (
+                      <span className="text-xs font-semibold text-gray-400">Article coming soon</span>
+                    ) : (
+                      <Link
+                        href={`/blogs/${post.slug}`}
+                        className="inline-flex items-center gap-1 text-[#0097B2] text-sm font-semibold hover:gap-2 transition-all"
+                      >
                       Read More
                       <svg className="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
                       </svg>
                     </Link>
+                    )}
                   </div>
                 </div>
               </article>
@@ -147,10 +152,10 @@ export default function BlogsPage() {
           </p>
           <div className="mt-8">
             <Link
-              href="https://foundation.risetothrive-academy.com/offer-video-a"
+              href={FOUNDATION_OFFER_URL}
               className="inline-flex items-center justify-center rounded-xl bg-[#DB910F] px-8 py-4 text-lg font-bold text-white hover:bg-[#B25B00] transition-all shadow-lg"
             >
-              Start Foundation Course — $99
+              Start Foundation Course — {FOUNDATION_PRICE_LABEL}
             </Link>
           </div>
         </div>

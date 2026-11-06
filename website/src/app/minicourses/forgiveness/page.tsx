@@ -1,6 +1,8 @@
 import Link from "next/link";
+import { EnrollCard, FoundationOfferLink } from "@/components/EnrollCard";
+import { MINI_COURSE_PRICE_LABEL } from "@/lib/academy-links";
 
-const CHECKOUT_URL = process.env.NEXT_PUBLIC_STRIPE_URL_forgiveness || "#";
+const CHECKOUT_URL = process.env.NEXT_PUBLIC_STRIPE_URL_forgiveness;
 
 export const metadata = {
   title: "When Forgiveness Feels Impossible — Mini-Course",
@@ -38,44 +40,28 @@ export default function Page() {
               Download or open the fillable workbook to apply the teaching to your story.
             </p>
             <div className="mt-4">
-              <Link 
-                href="#" 
-                className="inline-flex items-center justify-center rounded-xl bg-[#0097B2] px-5 py-2 text-sm font-semibold text-white hover:bg-[#057a8f]"
+              <span
+                aria-disabled="true"
+                className="inline-flex cursor-not-allowed items-center justify-center rounded-xl bg-gray-300 px-5 py-2 text-sm font-semibold text-gray-600"
               >
                 Download Workbook (PDF)
-              </Link>
+              </span>
               <p className="mt-2 text-xs text-gray-500">Workbook coming soon</p>
             </div>
           </div>
         </div>
         <div className="space-y-6">
-          <div className="rounded-2xl border border-gray-200 bg-white p-6 shadow-sm">
-            <h2 className="text-lg font-bold">Enroll</h2>
-            <p className="mt-2 text-sm text-gray-700">
-              Instant access after purchase. Your receipt and access email will arrive within minutes.
-            </p>
-            <div className="mt-4">
-              <Link 
-                href={CHECKOUT_URL} 
-                className="inline-flex w-full items-center justify-center rounded-xl bg-[#DB910F] px-5 py-2 text-sm font-semibold text-white hover:bg-[#c4810d]"
-              >
-                Enroll Now — $49
-              </Link>
-            </div>
-            <p className="mt-2 text-xs text-gray-500">Secure checkout via Stripe.</p>
-          </div>
+          <EnrollCard
+            courseTitle="When Forgiveness Feels Impossible"
+            checkoutUrl={CHECKOUT_URL}
+            priceLabel={MINI_COURSE_PRICE_LABEL}
+            libraryHref="/minicourses?course=forgiveness"
+          />
           <div className="rounded-2xl border border-gray-200 bg-white p-6 shadow-sm">
             <h2 className="text-lg font-bold">Continue Your Healing</h2>
             <ul className="mt-2 text-sm text-gray-700 list-disc pl-5 space-y-1">
               <li>
-                <a 
-                  href="https://risetothriveacademy.com/foundation" 
-                  target="_blank" 
-                  rel="noopener noreferrer"
-                  className="text-[#0097B2] underline hover:no-underline"
-                >
-                  Start the 5‑Day Foundation Course
-                </a>
+                <FoundationOfferLink />
               </li>
               <li>
                 <Link href="/minicourses" className="text-[#0097B2] underline hover:no-underline">

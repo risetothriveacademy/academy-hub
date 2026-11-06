@@ -113,8 +113,8 @@ export default function FoundationThankYouPage() {
             This program is designed to support you through faith-based education
             and practical tools. Please remember this does not replace professional
             medical, mental health, legal, or financial care. If you are in crisis,
-            please contact a licensed professional or call the National Suicide
-            Prevention Lifeline at{" "}
+            please contact a licensed professional or call or text the 988 Suicide
+            &amp; Crisis Lifeline at{" "}
             <a
               href="tel:988"
               className="text-[#0097B2] hover:text-[#00c5e5] font-semibold"
