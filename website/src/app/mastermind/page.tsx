@@ -1,4 +1,4 @@
-import Link from "next/link";
+import { requestDetailsHref } from "@/lib/academy-links";
 
 export const metadata = {
   title: "Mastermind — Growth & Accountability",
@@ -45,17 +45,18 @@ export default function MastermindPage() {
           {/* Enroll */}
           <div className="rounded-2xl border-2 border-[#DB910F]/20 bg-gradient-to-br from-[#DB910F]/5 to-[#0097B2]/5 p-8">
             <h2 className="text-2xl font-bold text-[#3B3B3B]">Join the Mastermind</h2>
+            <p className="mt-4 inline-flex items-center rounded-full bg-amber-50 px-3 py-1 text-xs font-semibold text-amber-800 ring-1 ring-amber-200">
+              Status: enrollment opening soon
+            </p>
             <p className="mt-4 text-gray-700">
-              Ready to take your healing and growth to the next level? Visit our Mastermind landing page for pricing, dates, and enrollment.
+              Pricing, dates and the enrollment page for the Mastermind are being finalized. Ask for details and we&apos;ll let you know as soon as it opens.
             </p>
             <div className="mt-6">
               <a
-                href="https://risetothrive-academy.com/mastermind/checkout"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="inline-flex items-center justify-center rounded-xl bg-[#DB910F] px-6 py-3 font-bold text-white hover:bg-[#B25B00] transition-all"
+                href={requestDetailsHref("Mastermind — request details")}
+                className="inline-flex items-center justify-center rounded-xl bg-[#DB910F] px-6 py-3 font-bold text-white hover:bg-[#B25B00] transition-all focus:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:ring-[#0097B2]"
               >
-                Go to Mastermind Landing Page →
+                Request details
               </a>
             </div>
           </div>

@@ -3,6 +3,7 @@
 import Link from "next/link";
 import Image from "next/image";
 import { useState } from "react";
+import { FOUNDATION_OFFER_URL, FOUNDATION_PRICE_LABEL } from "@/lib/academy-links";
 
 const BRAND = {
   teal: "#0097B2",
@@ -103,7 +104,7 @@ export default function Home() {
             <div className="mt-6 flex flex-wrap justify-center gap-6 text-sm text-slate-400">
               <div className="flex items-center gap-2">
                 <span className="text-2xl" style={{ color: BRAND.teal }}>✓</span>
-                <span>1,000+ Lives Transformed</span>
+                <span>Guided Workbooks</span>
               </div>
               <div className="flex items-center gap-2">
                 <span className="text-2xl" style={{ color: BRAND.teal }}>✓</span>
@@ -134,7 +135,7 @@ export default function Home() {
           <div className="flex flex-col space-y-6">
             {/* Start 5-Day Foundation Course Button */}
             <Link
-              href="https://foundation.risetothrive-academy.com/offer-video-a"
+              href={FOUNDATION_OFFER_URL}
               className="block"
             >
               <div className="overflow-hidden rounded-xl shadow-xl hover:shadow-2xl transition-all transform hover:scale-[1.02]">
@@ -244,7 +245,7 @@ export default function Home() {
               {/* Bottom button - aligned */}
               <div className="mt-6">
                 <Link
-                  href="https://foundation.risetothrive-academy.com/offer-video-a"
+                  href={FOUNDATION_OFFER_URL}
                   className="block"
                 >
                   <div className="overflow-hidden rounded-xl shadow-xl hover:shadow-2xl transition-all transform hover:scale-[1.02]">
@@ -253,16 +254,16 @@ export default function Home() {
                         backgroundImage: `linear-gradient(90deg, ${BRAND.teal}, ${BRAND.gold}, ${BRAND.teal})`,
                       }}
                     >
-                      Start 5-Day Foundation Course — $99
+                      Start 5-Day Foundation Course — {FOUNDATION_PRICE_LABEL}
                     </div>
                   </div>
                 </Link>
               </div>
 
               <div className="mt-6 flex items-center justify-between">
-                <span className="text-2xl font-bold text-[#0097B2]">$99</span>
+                <span className="text-2xl font-bold text-[#0097B2]">{FOUNDATION_PRICE_LABEL}</span>
                 <Link
-                href="/disclosures/universal-legal-disclosures"
+                href={FOUNDATION_OFFER_URL}
                 className="inline-flex items-center gap-2 px-6 py-3 rounded-lg font-bold text-white transition-all hover:shadow-lg"
                 style={{
                 background: `linear-gradient(135deg, ${BRAND.teal}, ${BRAND.gold})`
@@ -519,58 +520,45 @@ export default function Home() {
       </section>
       */}
 
-      {/* Testimonials - Dark Theme */}
+      {/* What to Expect (replaces unverified testimonials pending editorial approval) */}
       <section className="bg-slate-900 border-y border-slate-800 py-20">
         <div className="mx-auto max-w-7xl px-6">
           <div className="text-center mb-12">
             <h2 className="text-3xl md:text-4xl font-extrabold text-white">
-              Lives Transformed
+              What to Expect
             </h2>
             <p className="mt-4 text-lg text-slate-400">
-              Real stories from real people experiencing real breakthrough.
+              Practical, faith-based teaching you can work through at your own pace.
             </p>
           </div>
 
           <div className="grid gap-8 md:grid-cols-3">
-            {/* Testimonial 1 */}
             <div className="rounded-2xl border border-slate-700 bg-slate-800/60 backdrop-blur-sm p-6 shadow-lg">
-              <div className="mb-4 flex items-center gap-1 text-[#DB910F]">
-                <span className="text-2xl">★★★★★</span>
-              </div>
-              <blockquote className="text-slate-300 leading-relaxed">
-                "The Foundation Course gave me tools I never knew existed. For the first time in years, I feel hope and clarity."
-              </blockquote>
-              <div className="mt-4 text-sm font-semibold text-[#0097B2]">
-                — Sarah M., Entrepreneur
-              </div>
+              <h3 className="text-lg font-bold text-[#0097B2]">Guided, day-by-day lessons</h3>
+              <p className="mt-3 text-slate-300 leading-relaxed">
+                The 5-Day Foundation Course takes one theme each day, with a workbook assignment for every day so you can apply the teaching to your own story.
+              </p>
             </div>
-
-            {/* Testimonial 2 */}
             <div className="rounded-2xl border border-slate-700 bg-slate-800/60 backdrop-blur-sm p-6 shadow-lg">
-              <div className="mb-4 flex items-center gap-1 text-[#DB910F]">
-                <span className="text-2xl">★★★★★</span>
-              </div>
-              <blockquote className="text-slate-300 leading-relaxed">
-                "This program helped me break generational patterns of shame and fear. My entire family is experiencing the overflow."
-              </blockquote>
-              <div className="mt-4 text-sm font-semibold text-[#0097B2]">
-                — David R., Pastor
-              </div>
+              <h3 className="text-lg font-bold text-[#0097B2]">Focused root-cause mini-courses</h3>
+              <p className="mt-3 text-slate-300 leading-relaxed">
+                Each Emotional Recovery mini-course is a short lesson on one specific struggle, paired with a practical workbook.
+              </p>
             </div>
-
-            {/* Testimonial 3 */}
             <div className="rounded-2xl border border-slate-700 bg-slate-800/60 backdrop-blur-sm p-6 shadow-lg">
-              <div className="mb-4 flex items-center gap-1 text-[#DB910F]">
-                <span className="text-2xl">★★★★★</span>
-              </div>
-              <blockquote className="text-slate-300 leading-relaxed">
-                "Torah's compassionate, faith-based approach met me exactly where I was. I'm finally free from decades of anxiety."
-              </blockquote>
-              <div className="mt-4 text-sm font-semibold text-[#0097B2]">
-                — Michelle T., Healthcare Professional
-              </div>
+              <h3 className="text-lg font-bold text-[#0097B2]">Faith-centered education</h3>
+              <p className="mt-3 text-slate-300 leading-relaxed">
+                Scripture and prayer are woven through every lesson. Our programs are educational and faith-based, not therapy, medical care or crisis services.
+              </p>
             </div>
           </div>
+          <p className="mt-8 text-center text-sm text-slate-500">
+            Please read our{" "}
+            <Link href="/disclosures/universal-legal-disclosures" className="text-[#0097B2] underline hover:no-underline">
+              disclosures
+            </Link>{" "}
+            before enrolling.
+          </p>
         </div>
       </section>
 
@@ -581,30 +569,20 @@ export default function Home() {
             Ready to Begin Your Healing Journey?
           </h2>
 
-          {/* Social Proof Testimonial */}
-          <div className="mt-8 max-w-3xl mx-auto">
-            <blockquote className="text-xl md:text-2xl text-slate-200 italic leading-relaxed">
-              "This changed my life. I finally found freedom from 20 years of shame."
-            </blockquote>
-            <p className="mt-3 text-base font-semibold text-[#0097B2]">
-              — Sarah M., Foundation Graduate
-            </p>
-          </div>
-
           <p className="mt-6 text-lg text-slate-300">
-            Join 1,000+ who transformed their pain into power.
+            Begin transforming your pain into power, one step at a time.
           </p>
 
           {/* Two Enrollment Buttons Side-by-Side */}
           <div className="mt-10 flex flex-wrap justify-center gap-4">
             <Link
-              href="https://foundation.risetothrive-academy.com/offer-video-a"
+              href={FOUNDATION_OFFER_URL}
               className="inline-flex items-center justify-center rounded-xl px-8 py-4 text-lg font-bold text-slate-950 shadow-xl hover:shadow-2xl transition-all transform hover:scale-105"
               style={{
                 backgroundImage: `linear-gradient(90deg, ${BRAND.teal}, ${BRAND.gold}, ${BRAND.teal})`,
               }}
             >
-              Foundation Course — $99
+              Foundation Course — {FOUNDATION_PRICE_LABEL}
             </Link>
             <Link
               href="/minicourses"

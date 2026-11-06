@@ -13,7 +13,6 @@ function Pill({ children }: { children: React.ReactNode }) {
 
 export default function Page() {
   const COURSE = { title: "Self-Sabotage & Doubt", slug: "self-sabotage-and-doubt" };
-  const WORKBOOK_URL = "#"; // placeholder
 
   return (
     <main className="min-h-screen bg-[#F8F9FA] text-[#3B3B3B]">
@@ -54,9 +53,10 @@ export default function Page() {
             <section className="rounded-2xl border border-gray-200 bg-white p-6 shadow-sm">
               <h2 className="text-lg font-extrabold">Workbook</h2>
               <p className="mt-2 text-sm text-gray-700">Download or open the fillable workbook.</p>
-              <a href={WORKBOOK_URL} className="mt-3 inline-flex items-center justify-center rounded-xl bg-[#0097B2] px-4 py-2 text-sm font-semibold text-white hover:bg-[#057a8f]">
+              <span aria-disabled="true" className="mt-3 inline-flex cursor-not-allowed items-center justify-center rounded-xl bg-gray-300 px-4 py-2 text-sm font-semibold text-gray-600">
                 Open Workbook (PDF)
-              </a>
+              </span>
+              <p className="mt-2 text-xs text-gray-500">Workbook coming soon</p>
             </section>
             <section className="rounded-2xl border border-gray-200 bg-white p-6 shadow-sm">
               <h2 className="text-lg font-extrabold">Continue Your Healing Journey</h2>
