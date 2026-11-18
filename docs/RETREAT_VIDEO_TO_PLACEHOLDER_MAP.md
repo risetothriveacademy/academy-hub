@@ -35,3 +35,15 @@ Additional screenshot videos: Healthcare Burnout - Who Heals the Organization; B
 
 ## Implementation requirements
 Keep existing page branding and 12/10 selectors. Click tile -> show one matched video with captions, a short introduction and audience-specific CTA. Branch A US$2,497 Personal & Business Recovery; Branch B US$3,297 Professional Expansion (Sunday extra session). Use branch-specific GHL inquiry forms and track campaign UTMs; do not transmit sensitive symptom/challenge selections to advertising platforms. Initial CTA is request details until January 2027 exact dates, venue, inclusions and payment/refund terms confirmed. Professional video CTAs must mention *expanding professional impact* beyond caregiver burnout. All actual HeyGen links and embedded functionality remain unverified.
+
+## Current status / remaining TODO
+**Video-to-website mapping is documented. No retreat videos have been embedded yet.**
+
+- [ ] Obtain the actual playable HeyGen video URLs or exported video files.
+- [ ] Review and approve the professional-video closing CTAs, especially the language around expanding professional impact.
+- [ ] Confirm the final video selected for every Branch A and Branch B website placeholder where more than one candidate is listed.
+- [ ] Connect each approved video to its matching website placeholder.
+- [ ] Connect Branch A and Branch B CTAs to their correct GHL inquiry forms.
+- [ ] Confirm captions, mobile playback, thumbnail/poster images and accessibility.
+- [ ] Test UTM tracking and end-to-end inquiry submission after embedding.
+- [ ] Mark this map as implemented only after live-site QA is complete.
