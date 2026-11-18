@@ -73,3 +73,16 @@
 Before paid ads: verify dates, venue and inclusions; verify approved images and rights; finalize both audience pages; test forms/CRM/notifications; verify live ad-account status; review safe and compliant copy; test the lead journey end to end; obtain Diane's approval.
 
 **Scope note:** This document records the retreat campaign and its relationship to courses. The Hope When Broken Devotional App is a separately operated nonprofit ministry, not a Rise to Thrive Hub LLC division.
+
+
+## Approved implementation direction — existing page video gateways (November 18, 2026)
+
+- **Reuse the existing retreat website sections rather than rebuild:** Branch A's **"Pain Has Many Names"** 12-topic tiles on **Recover from Trauma**, and Branch B's **"Built for Helping Professionals"** profession tiles.
+- **Ad A** takes visitors directly to the Branch A section (deep-link/anchor or dedicated destination). **Ad B** takes visitors to the Branch B section. Verify final live URLs and navigation before using ad links.
+- Make each topic/profession tile an accessible clickable control. Selecting it reveals the matching existing HeyGen video, short descriptive copy, and branch-specific **Request Retreat Details / Register Interest** call to action. Keep pages uncluttered, mobile-friendly, captioned, and avoid auto-playing all videos.
+- Video screenshots establish topics only; **actual HeyGen export files, approved embeds or URLs are required** to implement playback. Audit titles, duplicates, branding, usage rights, claims, and whether Branch B videos need an additional professional-expansion ending.
+- A single GoHighLevel pipeline should capture branch, campaign/UTM, video/source, consented contact details, follow-up status, VA owner and next action. Do not collect or transmit sensitive mental-health inferences from anonymous clicks to advertising platforms; only store self-selected topic interests with clear notice and appropriate consent.
+- **Branch A:** US$2,497, shared Thursday–Saturday-evening program. **Branch B:** US$3,297, shared program plus Sunday professional-expansion session. Both in January 2027; exact dates and venue pending. Do not present dates, venue, tours, accommodations or availability as confirmed.
+- Registration forms and Stripe payment links should be connected and tested once exact dates, package inclusions, currency, refund/cancellation terms, capacity, tax treatment and payment approvals are finalized. Until then, use an inquiry/priority-interest form rather than an unconditional payment flow.
+- Urgency must be factual: limited confirmed spaces, a real registration deadline, or a real price-change date if established. Avoid claims that delaying trauma recovery inevitably worsens a person's condition.
+- Test: tile selection → corresponding video → branch CTA → form → CRM tag → VA notification → confirmation; then payment & receipt after approved setup. Test all 12 Branch A topics and every Branch B profession, including on mobile.
