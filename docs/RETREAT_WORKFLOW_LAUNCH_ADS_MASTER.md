@@ -31,8 +31,8 @@
 
 ## Retreat proposition and visual carousel
 
-- Proposed: Niagara Falls, Ontario, Canada, January 2027, Thursday–Sunday, $2,997. Specific dates, currency, venue, inclusions and excursions are **not yet confirmed**.
-- Two distinct branch landing pages; one shared inquiry infrastructure and destination experience.
+- Proposed: one combined Niagara Falls, Ontario, Canada retreat in January 2027, with exact dates open. **Branch A — Personal & Business Recovery: $2,497, Thursday–Saturday evening. Branch B — Professional Expansion: $3,297, Thursday–Sunday, including an additional Sunday professional session.** These prices are the agreed planning figures, with currency, venue, accommodation nights, inclusions and excursions still to confirm before public advertising.
+- Two distinct audience-specific landing pages for one combined event; shared Thursday–Saturday curriculum covers The Unseen Battle™, The Inner Voice™ and Three Spheres Recovery™. Branch A concludes Saturday evening; Branch B attends an additional Sunday professional expansion session on frameworks, possible directory membership, future specialist training pathways and collaborations. Professional certification is not represented as presently available. One shared inquiry infrastructure and destination experience.
 - Six carousel images: (1) uncluttered Niagara Falls hero; (2) upscale hotel boardroom/workshop; (3) approved Diane Salman MBA branded stage image; (4) Niagara-on-the-Lake town/carriage; (5) reception/networking; (6) group wine-country tour or dinner.
 - All venue/activity imagery is illustrative until licensing and vendor confirmations. Do not advertise unbooked experiences as included.
 - Brand line: **Rise to Thrive Retreats™ — Building Resilience. Inspiring Recovery. Rediscovering Purpose. Strengthening Performance.**
